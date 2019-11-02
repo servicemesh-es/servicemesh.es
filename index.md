@@ -4,6 +4,42 @@ title: servicemesh.es
 
 # Service Mesh Comparison
 
+## What is a Service Mesh?
+
+A Service Mesh is a dedicated infrastructure layer that adds features to connections between services. It allows to control traffic and gain insights throughout the system. Observability, Traffic Shifting (for Canary Releasing), Resiliency features such as Circuit Breaking and Retry/Timeout and automatic mutual TLS can be configured once and enforced in a decentralized fashion. In contrast to libraries, which are used for simiar functionality, a Service Mesh does not require any code changes. Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.  
+
+## Who needs a Service Mesh?
+
+The value of a Service Mesh grows with the number of services an application consists of. Logically, Microservices-Architectures are the most common applicaton for a Service Mesh. But apart from the plain number of services, their specific interaction might be even more important to if a Service Mesh can improve the control, reliability, security and observability of the services. Even a monolith could benfit from a Service Mesh and some concrete Microservice-Applications might not.
+
+## Service Mesh Implementations
+
+-  **Istio** 
+  If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
+-  **Linkerd 2**
+   While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.  
+-  **AWS App Mesh**
+   Not long after Service Mesh became a thing, AWS added their own Service Mesh for Applications on AWS.
+-  **Consul/Consul Connect**
+   Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features. 
+-  **maesh**
+   As the name already reveals, maesh is the Service Mesh based on Traefik, a cloud native API gateway.
+-  **Kuma**
+   Similiar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
+
+**Service Mesh Interface**
+In the face of the vast variety of Service Mesh implementations, a group of companies, including Microsoft, Buoyant (developying Linkerd) and Consul, joined forces to create a common standard for Service Mesh features. The result, the Service Mesh Interface specification, means to enable tools based on Service Mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any Service Mesh rather than binding to a specific set of implementations. Service Mesh users also benefit from the ability to change their Service Mesh implementation without changing the configuration.
+
+  
+
+## How to decide for a Service Mesh Implementation
+
+The list above shows that Service Mesh
+
+
+
+## Technical Comparison 
+
 |                                                              | ![istio-blue-logo](img/istio.png)          | ![linkerd](img/linkerd.png)                                  | ![awsappmesh](img/awsappmesh.png)  | ![consul](img/consul.png)                        | ![maesh](img/maesh.svg) | ![kuma](img/kuma.png)   |
 | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------ | ----------------------- | ----------------------- |
 |                                                              | **Istio**                                  | **Linkerd 2**                                                | **AWS App Mesh**                   | **Consul**                                       | **mæsh**                | **Kuma**                |
@@ -45,3 +81,7 @@ title: servicemesh.es
 | Authorization Rules                                          | yes                                        | no                                                           |                                    | yes                                              | no                      | yes                     |
 
 *= might be possible through manual configuration/templating of proxy
+
+
+
+### Resources, Latency and Usability
