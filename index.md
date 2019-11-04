@@ -2,6 +2,8 @@
 title: servicemesh.es
 ---
 
+{% include head.html %}
+
 ## What is a Service Mesh?
 
 A Service Mesh is a dedicated infrastructure layer that adds features to a network between services. It allows to control traffic and gain insights throughout the system. Observability, traffic shifting (for canary releasing), resiliency features (such as circuit breaking and retry/timeout) and automatic mutual TLS can be configured once and enforced in a decentralized fashion. In contrast to libraries, which are used for similar functionality, a Service Mesh does not require code changes. Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.  
@@ -12,23 +14,23 @@ The value of a Service Mesh grows with the number of services an application con
 
 ## Service Mesh Implementations
 
-- **Istio** 
+- **Istio**
 
    If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
 -  **Linkerd 2**
-  
+
    While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.  
 -  **AWS App Mesh**
-  
+
    Not long after the Service Mesh hype, AWS added their own Service Mesh for Applications on AWS.
 -  **Consul/Consul Connect**
-  
-   Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features. 
+
+   Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features.
 -  **maesh**
-  
+
    As the name already reveals, maesh is the Service Mesh based on Traefik, a cloud native API gateway.
 -  **Kuma**
-  
+
    Similiar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
 
 **Service Mesh Interface**
@@ -37,7 +39,7 @@ In the face of the vast variety of Service Mesh implementations, a group of comp
 
 
 
-## Technical Comparison 
+## Technical Comparison
 
 |                                                              | ![istio-blue-logo](img/istio.png)          | ![linkerd](img/linkerd.png)                                  | ![awsappmesh](img/awsappmesh.png)  | ![consul](img/consul.png)                        | ![maesh](img/maesh.svg) | ![kuma](img/kuma.png)   |
 | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------ | ----------------------- | ----------------------- |
