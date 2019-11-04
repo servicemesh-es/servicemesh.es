@@ -12,23 +12,23 @@ The value of a Service Mesh grows with the number of services an application con
 
 ## Service Mesh Implementations
 
--  **Istio** 
-  
-  If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
+- **Istio** 
+
+   If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
 -  **Linkerd 2**
-   
+  
    While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.  
 -  **AWS App Mesh**
-   
+  
    Not long after the Service Mesh hype, AWS added their own Service Mesh for Applications on AWS.
 -  **Consul/Consul Connect**
-   
+  
    Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features. 
 -  **maesh**
-   
+  
    As the name already reveals, maesh is the Service Mesh based on Traefik, a cloud native API gateway.
 -  **Kuma**
-   
+  
    Similiar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
 
 **Service Mesh Interface**
