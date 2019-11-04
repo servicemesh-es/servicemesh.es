@@ -6,11 +6,11 @@ title: servicemesh.es
 
 ## What is a Service Mesh?
 
-A Service Mesh is a dedicated infrastructure layer that adds features to connections between services. It allows to control traffic and gain insights throughout the system. Observability, Traffic Shifting (for Canary Releasing), Resiliency features such as Circuit Breaking and Retry/Timeout and automatic mutual TLS can be configured once and enforced in a decentralized fashion. In contrast to libraries, which are used for simiar functionality, a Service Mesh does not require any code changes. Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.  
+A Service Mesh is a dedicated infrastructure layer that adds features to a network between services. It allows to control traffic and gain insights throughout the system. Observability, traffic shifting (for canary releasing), resiliency features (such as circuit breaking and retry/timeout) and automatic mutual TLS can be configured once and enforced in a decentralized fashion. In contrast to libraries, which are used for similar functionality, a Service Mesh does not require code changes. Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.  
 
 ## Who needs a Service Mesh?
 
-The value of a Service Mesh grows with the number of services an application consists of. Logically, Microservices-Architectures are the most common applicaton for a Service Mesh. But apart from the plain number of services, their specific interaction might be even more important to if a Service Mesh can improve the control, reliability, security and observability of the services. Even a monolith could benfit from a Service Mesh and some concrete Microservice-Applications might not.
+The value of a Service Mesh grows with the number of services an application consists of. Logically, Microservices-Architectures are the most common use cases for a Service Mesh. However the specific interaction might be more relevant in regards to how a Service Mesh can improve the control, reliability, security and observability of the services. Even a monolith could benefit from a Service Mesh and some concrete Microservice-Applications might not.
 
 ## Service Mesh Implementations
 
@@ -19,7 +19,7 @@ The value of a Service Mesh grows with the number of services an application con
 -  **Linkerd 2**
    While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.  
 -  **AWS App Mesh**
-   Not long after Service Mesh became a thing, AWS added their own Service Mesh for Applications on AWS.
+   Not long after the Service Mesh hype, AWS added their own Service Mesh for Applications on AWS.
 -  **Consul/Consul Connect**
    Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features. 
 -  **maesh**
@@ -28,13 +28,7 @@ The value of a Service Mesh grows with the number of services an application con
    Similiar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
 
 **Service Mesh Interface**
-In the face of the vast variety of Service Mesh implementations, a group of companies, including Microsoft, Buoyant (developying Linkerd) and Consul, joined forces to create a common standard for Service Mesh features. The result, the Service Mesh Interface specification, means to enable tools based on Service Mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any Service Mesh rather than binding to a specific set of implementations. Service Mesh users also benefit from the ability to change their Service Mesh implementation without changing the configuration.
-
-  
-
-## How to decide for a Service Mesh Implementation
-
-The list above shows that Service Mesh
+In the face of the vast variety of Service Mesh implementations, a group of companies, including Microsoft, Buoyant (developing Linkerd) and HashiCorp (developing Consul), joined forces to create a common standard for Service Mesh features. The result, the Service Mesh Interface specification, means to enable tools based on Service Mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any Service Mesh rather than binding to a specific set of implementations. Service Mesh users also benefit from the ability to change their Service Mesh implementation without changing the configuration.
 
 
 
@@ -82,6 +76,9 @@ The list above shows that Service Mesh
 
 *= might be possible through manual configuration/templating of proxy
 
+## Service Mesh Deep Dive
 
+The free Service Mesh Primer explains the Service Mesh pattern und features in detail and contains examples for Istio:
 
-### Resources, Latency and Usability
+![[Service Mesh Primer](leanpub.com/service-mesh-primer)](img/primer.jpeg)
+
