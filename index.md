@@ -12,6 +12,7 @@ A Service Mesh is a dedicated infrastructure layer that adds features to a netwo
 
 The value of a Service Mesh grows with the number of services an application consists of. Logically, Microservices-Architectures are the most common use cases for a Service Mesh. However, the specific interaction might be more relevant in regards to how a Service Mesh can improve the control, reliability, security and observability of the services. Even a monolith could benefit from a Service Mesh and some concrete Microservice-Applications might not.
 
+
 ## Service Mesh Implementations
 
 - **Istio**
