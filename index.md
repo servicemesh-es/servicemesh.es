@@ -1,5 +1,6 @@
 ---
 title: servicemesh.es
+layout: page
 ---
 
 {% include head.html %}
