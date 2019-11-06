@@ -206,8 +206,8 @@ ul:not([class]),
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25))), url("/assets/visual-header-ice-1444.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/visual-header-ice-1444.jpg"); }
   .topic-header-bg-image-text-box-igel {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25))), url("/assets/visual-header-igel-1444.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/visual-header-igel-1444.jpg"); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25))), url("/img/visual-header-igel-1444.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/visual-header-igel-1444.jpg"); }
   .topic-header-bg-image-text-box-koralle {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25))), url("/assets/visual-header-koralle-1444.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/visual-header-koralle-1444.jpg"); }
@@ -2272,7 +2272,7 @@ super-quote > blockquote,
   background-size: cover; }
 
 .wall-note-bg-image-igel {
-  background-image: url("/assets/visual-header-igel-1444.jpg");
+  background-image: url("/img/visual-header-igel-1444.jpg");
   background-position: center;
   background-size: cover; }
 
@@ -3495,7 +3495,7 @@ super-quote > blockquote,
   background-position: center; }
 
 .big-content-teaser-bg-image-igel {
-  background-image: url("/assets/visual-header-igel-1444.jpg");
+  background-image: url("/img/visual-header-igel-1444.jpg");
   background-position: center; }
 
 .topic-header-bg-image-koralle {
@@ -3526,7 +3526,7 @@ super-quote > blockquote,
     font-size: 2.7216rem; } }
 
 .case-tile-teaser-bg-image-demo {
-  background-image: url("/assets/visual-header-igel-1444.jpg");
+  background-image: url("/img/visual-header-igel-1444.jpg");
   background-position: center; }
 
 .case-tile-teaser-bg-image-training {
