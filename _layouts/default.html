@@ -6,16 +6,10 @@
   <body>
     <main role="main">
       {% include page-header.html %}
-      {% include comparison.html %}
+      {% include implementations.html %}
       {% include mesh-interface.html %}
-
-      <section class="page-layout-xl--default">
-
-        {{ content }}
-
-        {% include page-footer.html %}
-
-      </section>
+      {% include comparison.html %}
+      {% include page-footer.html %}
     </main>
   </body>
 </html>

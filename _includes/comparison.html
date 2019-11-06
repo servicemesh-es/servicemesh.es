@@ -1,51 +1,331 @@
-<h2 class="section-heading--primary"> Service Mesh Implementations </h2>
-<div class="stripe--primary">
-  </br>
-  <div class="page-layout-xl--default">
-    <div class="blocks">
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">Istio</h2>
-        <p class="list-teaser__text">
-          If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
-        </p>
-      </div>
-
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">Linkerd 2</h2>
-        <p class="list-teaser__text">
-          While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.
-        </p>
-      </div>
-
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">AWS App Mesh</h2>
-        <p class="list-teaser__text">
-          Not long after the Service Mesh hype, AWS added their own Service Mesh for Applications on AWS.
-        </p>
-      </div>
-    </div>
-
-    <div class="blocks">
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">Consul/Consul Connect</h2>
-        <p class="list-teaser__text">
-          Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features.
-        </p>
-      </div>
-
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">maesh</h2>
-        <p class="list-teaser__text">
-          As the name already reveals, maesh is the Service Mesh based on Traefik, a cloud native API gateway.
-        </p>
-      </div>
-
-      <div class="list-teaser list-teaser__body">
-        <h2 class="list-teaser__headline">Kuma</h2>
-        <p class="list-teaser__text">
-          Similar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="page-layout-xl--default">
+  <h2 class="section-heading--primary"> Technical Comparison </h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Istio</th>
+        <th scope="col">Linkerd 2</th>
+        <th scope="col">AWS App Mesh</th>
+        <th scope="col">Consul</th>
+        <th scope="col">maesh</th>
+        <th scope="col">Kuma</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Current version</th>
+        <td>1.3</td>
+        <td>2.6</td>
+        <td></td>
+        <td>1.6</td>
+        <td>0.7</td>
+        <td>0.2</td>
+      </tr>
+      <tr>
+        <th scope="row">License</th>
+        <td>Apache License 2.0</td>
+        <td>Apache License 2.0</td>
+        <td>Closed Source</td>
+        <td>Mozilla License</td>
+        <td>Apache License 2.0</td>
+        <td>Apache License 2.0</td>
+      </tr>
+      <tr>
+        <th scope="row">Developed by</th>
+        <td>Google, IBM, Lyft</td>
+        <td>Buoyant</td>
+        <td>Amazon</td>
+        <td>HashiCorp</td>
+        <td>containous</td>
+        <td>Kong</td>
+      </tr>
+      <tr>
+        <th scope="row">Service Proxy</th>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
+        <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">linkerd-proxy</a></td>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
+        <td>defaults to<a href="https://www.envoyproxy.io" target="_blank"> Envoy </a>exchangeable</td>
+        <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Platform</th>
+        <td>Kubernetes, Consul & Nomad</td>
+        <td>Kubernetes</td>
+        <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
+        <td>Kubernetes, Nomad, standalone</td>
+        <td>Kubernetes</td>
+        <td>Kubernetes, “universal”</td>
+      </tr>
+      <tr>
+        <th scope="row">Automatic Sidecar Injection</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes (per Node)</td>
+        <td>yes</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Supported Protocols</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">TCP</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">HTTP/1.1+</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">HTTP/2</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>in preview</td>
+        <td>yes</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">gRPC</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>in preview</td>
+        <td>yes</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Service Mesh Interface compatibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Traffic Access Control+</th>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Traffic Specs</th>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">ffic Split</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Traffic Metrics</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Monitoring Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Access Log Generation	</th>
+        <td>yes</td>
+        <td>no ( tap-Feature instead)</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">“Golden Signal” Metrics Generation</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes, depending on the proxy used</td>
+        <td>yes</td>
+        <td>no*</td>
+      </tr>
+      <tr>
+        <th scope="row">Integrated, pre-configured Prometheus	</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Integrated, pre-configured Grafana</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td></td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Per-Route Metrics</th>
+        <td>no</td>
+        <td>yes</td>
+        <td></td>
+        <td>depending on the proxy used</td>
+        <td></td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Dashboard</th>
+        <td>yes, <a href="https://www.kiali.io" target="_blank">Kiali</a></td>
+        <td>yes</td>
+        <td>yes, AWS Cloud Watch</td>
+        <td>yes, showing only configuration and availability</td>
+        <td>no</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <th scope="row">Compatible Tracing-Backends</th>
+        <td>Jaeger, Zipkin, Solarwinds</td>
+        <td>all Backends supporting <a href="https://opencensus.io/service/exporters" target="_blank">OpenCensus</a></td>
+        <td>AWS X-Ray</td>
+        <td>Datadog, Jaeger, OpenTracing, Honeycomb, Zipkin</td>
+        <td>Jaeger</td>
+        <td></td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Routing Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Load Balancing</th>
+        <td>yes (Round Robin, Random, Least Connction)</td>
+        <td>yes (<a href="https://linkerd.io/2/features/load-balancing/" target="_blank">EWMA</a> exponentially weighted moving average)</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Percentage-based Traffic Splits</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">Header- and Path-based Traffic Splits</th>
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no*</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Resilience Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Circuit Breaking</th>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no*</td>
+        <td>yes</td>
+        <td>no*</td>
+      </tr>
+      <tr>
+        <th scope="row">Retry & Timeout</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>Timeout yes, Retry no*</td>
+        <td>yes</td>
+        <td>no*</td>
+      </tr>
+      <tr>
+        <th scope="row">Fault Injection</th>
+        <td>yes</td>
+        <td>yes, by adding a <a href="https://linkerd.io/2/tasks/fault-injection/" target="_blank">deployment and a traffic split config</a></td>
+        <td></td>
+        <td>no*</td>
+        <td>no</td>
+        <td>no*</td>
+      </tr>
+      <tr>
+        <th scope="row">Delay Injection</th>
+        <td>yes</td>
+        <td>no</td>
+        <td></td>
+        <td>no*</td>
+        <td>no</td>
+        <td>no*</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Security Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">mTLS</th>
+        <td>yes</td>
+        <td>yes, not for <a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">TCP</a></td>
+        <td></td>
+        <td>yes, via <a href="https://www.vaultproject.io" target="_blank">Vault</a></td>
+        <td>no</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">Authorization Rules</th>
+        <td>yes</td>
+        <td>no</td>
+        <td></td>
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>*Might be possible through manual configuration/templating of proxy.</p>
 </div>
