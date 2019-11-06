@@ -8,6 +8,7 @@ title: servicemesh.es
 
 A Service Mesh is a dedicated infrastructure layer that adds features to a network between services. It allows to control traffic and gain insights throughout the system. Observability, traffic shifting (for canary releasing), resiliency features (such as circuit breaking and retry/timeout) and automatic mutual TLS can be configured once and enforced in a decentralized fashion. In contrast to libraries, which are used for similar functionality, a Service Mesh does not require code changes. Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.  
 
+
 ## Who needs a Service Mesh?
 
 The value of a Service Mesh grows with the number of services an application consists of. Logically, Microservices-Architectures are the most common use cases for a Service Mesh. However, the specific interaction might be more relevant in regards to how a Service Mesh can improve the control, reliability, security and observability of the services. Even a monolith could benefit from a Service Mesh and some concrete Microservice-Applications might not.
