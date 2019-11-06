@@ -5,33 +5,6 @@ layout: page
 
 {% include head.html %}
 
-## Service Mesh Implementations
-
-- **Istio**
-
-   If you have heard about Service Mesh, you have probably heard about Istio too. Istio is by far the most popular Service Mesh, because it has the most features and it is backed by Google and IBM.
--  **Linkerd 2**
-
-   While Istio made the Service Mesh popular, Linkerd was the first Service Mesh and quite successful. Still the developers decided to build a new version - Linkerd 2 - committed to usability, performance and Kubernetes as the underlying platform.  
--  **AWS App Mesh**
-
-   Not long after the Service Mesh hype, AWS added their own Service Mesh for Applications on AWS.
--  **Consul/Consul Connect**
-
-   Consul is well known as a Service Discovery Solution. They decided to implement the Service Mesh pattern into their architecture to provide even more advanced features.
--  **maesh**
-
-   As the name already reveals, maesh is the Service Mesh based on Traefik, a cloud native API gateway.
--  **Kuma**
-
-   Similar to maesh, Kuma is also a very new Service Mesh made by developers of an API Gateway - Kong.
-
-## Service Mesh Interface
-
-In the face of the vast variety of Service Mesh implementations, a group of companies, including Microsoft, Buoyant (developing Linkerd), and HashiCorp (developing Consul), joined forces to create a common standard for Service Mesh features. The result, the Service Mesh Interface specification, means to enable tools based on Service Mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any Service Mesh rather than binding to a specific set of implementations. Service Mesh users also benefit from the ability to change their Service Mesh implementation without changing the configuration.
-
-
-
 ## Technical Comparison
 
 |                                                              | ![istio-blue-logo](img/istio.png)          | ![linkerd](img/linkerd.png)                                  | ![awsappmesh](img/awsappmesh.png)  | ![consul](img/consul.png)                                    | ![maesh](img/maesh.svg)       | ![kuma](img/kuma.png)              |
