@@ -1533,6 +1533,10 @@ ol:not([class]) {
     vertical-align: top;
     line-height: 1.56;
     font-size: 0.91146rem; }
+  .table th {
+    font-family: FFMarkWebProBold, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    padding: 0.5787rem;
+  }
 
 @media screen and (min-width: 48rem) {
   .table {
