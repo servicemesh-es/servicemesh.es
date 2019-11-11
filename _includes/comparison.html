@@ -7,7 +7,7 @@
         <th scope="col">Istio</th>
         <th scope="col">Linkerd 2</th>
         <th scope="col">AWS App Mesh</th>
-        <th scope="col">Consul</th>
+        <th scope="col">Consul Connect</th>
         <th scope="col">Maesh</th>
         <th scope="col">Kuma</th>
       </tr>
@@ -50,24 +50,49 @@
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
       </tr>
       <tr>
-        <th scope="row">Platform</th>
-        <td>Kubernetes, Consul & Nomad</td>
-        <td>Kubernetes</td>
-        <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
-        <td>Kubernetes, Nomad, standalone</td>
-        <td>Kubernetes</td>
-        <td>Kubernetes, “universal”</td>
-      </tr>
-      <tr>
-        <th scope="row">Automatic Sidecar Injection</th>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes (per Node)</td>
-        <td>yes</td>
-      </tr>
+          <th scope="row">Tutorial</th>
+          <td><a href="https://istio.io/docs/tasks/" target="_blank">Istio Tasks</a></td>
+          <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
+          <td><a href="docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
+          <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">Hashicorp Learn platform</a></td>
+          <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
+          <td><a href="https://kuma.io/docs/0.2.2/installation/kubernetes/#kubernetes" target="_blank">Kuma Kubernetes Quickstart</a></td>
+        </tr>
     </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+        <tr>
+          <th scope="col">Compatibility, Performance & Conplexity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <th scope="row">Platform</th>
+              <td>Kubernetes, Consul & Nomad</td>
+              <td>Kubernetes</td>
+              <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
+              <td>Consul, Nomad, Kubernetes</td>
+              <td>Kubernetes</td>
+              <td>Kubernetes, “universal”</td>
+            </tr>
+            <tr>
+              <th scope="row">Automatic Sidecar Injection</th>
+              <td>yes</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>yes (per Node)</td>
+              <td>yes</td>
+            </tr>
+        <tr>
+          <th scope="row">Choose if...</th>
+          <td>...you need a lot of flexibility and your team isn't scared of technical complexity.</td>
+          <td>...you need a Mesh that requires little attention and that is performant and simple.</td>
+          <td>...you've got everything on AWS anyway and plan to stay.</td>
+          <td>...you're already using Consul and feel comfortable with it.</td>
+          <td>...you're willing to wait a couple of months before taking your mesh to production.</td>
+          <td>...you're just curious what the youngest Service Mesh Implementation is envisioning for the future</td>
+        </tr>
+    </tbody>  
     <thead style="background-color: white; color: #ff4d67">
       <tr>
         <th scope="col">Supported Protocols</th>
