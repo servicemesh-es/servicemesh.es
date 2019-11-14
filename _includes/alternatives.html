@@ -1,0 +1,39 @@
+<div class="page-layout-xl--default">
+  <h2 class="section-heading--primary">Alternatives to Service Meshes</h2>
+  
+  <p>
+  Undoubtedly, Service Meshes are promising technologies that deserve the hype. But they also go along with challenges such as cognitive and technical complexity. 
+  Like any tool, they are not useful in every situation. Sometimes it might be a wise to keep existing boring technologies or to go with alternative solutions.
+</p>
+
+  <div class="blocks">
+
+    <div class="list-teaser list-teaser__body">
+      <h2 class="list-teaser__headline">Libraries</h2>
+      <p class="list-teaser__text">
+        Libraries are included in the Microservices. 
+        The drawbacks are dependencies on specific technologies/languages, 
+        potential inconsistency in implementations and 
+        missing separation of service infrastructure and business logic. 
+        <br>
+        <br>
+        However, the developer productivity can (at least in the short term) be better through the familiar use of libraries. 
+        Also, sometimes domain knowledge is needed, for example to configure the fallback for a circuit breaker or to define business metrics. 
+        In these cases, a Service Mesh is of no use. 
+      </p>
+    </div>
+
+    <div class="list-teaser list-teaser__body">
+      <h2 class="list-teaser__headline">No (synchronous) Microservices</h2>
+      <p class="list-teaser__text">
+        Synchronously integrated microservices are a popular architecture, despite several drawbacks such as latency and operational complexity. 
+        One of the reasons is that no other architecture facilitate faster delivery of software.
+        <br>
+        <br>
+        What is often overseen is that there are more approaches to microservices than integrating them synchronously. 
+        Patterns like SCS and asynchronous communication aim to mitigate many problems of classic mircoservices.
+        Unjustifiably, monolithic architectures are often not even considered as a solution.
+      </p>
+    </div>
+  </div>    
+</div>
