@@ -1,4 +1,4 @@
-# servicemesh.es
+# servicemesh.es | Service Mesh Comparison
 
 This repository contains the content of servicemesh.es, which aims to support decision making on Service Mesh technology and implementations.
 
