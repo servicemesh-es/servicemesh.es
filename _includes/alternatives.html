@@ -20,19 +20,34 @@
         However, the developer productivity can (at least in the short term) be better through the familiar use of libraries. 
         Also, sometimes domain knowledge is needed, for example to configure the fallback for a circuit breaker or to define business metrics. 
         In these cases, a Service Mesh is of no use. 
+        <br>
+        <br>
+        Service meshes require a change to the infrastructure. So it is not possible to use them if the
+        the infrastructure can or should not be changed. Sometimes the risk of changing the infrastructure is
+        deemed to high even though services meshes can be applied to specific services only.
       </p>
     </div>
 
     <div class="list-teaser list-teaser__body">
       <h2 class="list-teaser__headline">No (synchronous) Microservices</h2>
       <p class="list-teaser__text">
+        Service meshes are in particular helpful for synchronous communication.
+        They usually rely on the HTTP protocol to transfer additional information and e.g. understand if a call failed.
+        <br>
+        <br>
         Synchronously integrated microservices are a popular architecture, despite several drawbacks such as latency and operational complexity. 
         One of the reasons is that no other architecture facilitate faster delivery of software.
         <br>
         <br>
         What is often overseen is that there are more approaches to microservices than integrating them synchronously. 
         Patterns like SCS and asynchronous communication aim to mitigate many problems of classic mircoservices.
+        Of course you can have asynchronous microservices with HTTP e.g. by polling a feed for new events.
+        As service meshes rely on HTTP, they would still be of some use.
+        However, features e.g. for resilience are of less use as asynchronous communication supports resilience anyway.
+        <br>
+        <br>
         Unjustifiably, monolithic architectures are often not even considered as a solution.
+        Obviously service meshes can only help a monolith with the communication to other systems but not with the internal communication.
       </p>
     </div>
   </div>    
