@@ -20,12 +20,18 @@
         However, the developer productivity can (at least in the short term) be better through the familiar use of libraries. 
         Also, sometimes domain knowledge is needed, for example to configure the fallback for a circuit breaker or to define business metrics. 
         In these cases, a Service Mesh is of no use. 
+        <br>
+        <br>
+        Service meshes require a change to the infrastructure. So it is not possible to use them if the
+        the infrastructure can or should not be changed. Sometimes the risk of changing the infrastructure is
+        deemed to high even though services meshes can be applied to specific services only.
       </p>
     </div>
 
     <div class="list-teaser list-teaser__body">
       <h2 class="list-teaser__headline">No (synchronous) Microservices</h2>
       <p class="list-teaser__text">
+        Service meshes are in particular helpful for synchronous communication.
         Synchronously integrated microservices are a popular architecture, despite several drawbacks such as latency and operational complexity. 
         One of the reasons is that no other architecture facilitate faster delivery of software.
         <br>
