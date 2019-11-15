@@ -45,9 +45,18 @@
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">linkerd-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
-        <td>defaults to<a href="https://www.envoyproxy.io" target="_blank"> Envoy </a>exchangeable</td>
+        <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
         <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Ingress Controller</th>
+        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a></td>
+        <td>any</td>
+        <td></td>
+        <td>any</td>
+        <td>any</td>
+        <td>any</td>
       </tr>
       <tr>
           <th scope="row">Governance</th>
@@ -67,41 +76,26 @@
           <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
           <td><a href="https://kuma.io/docs/0.2.2/installation/kubernetes/#kubernetes" target="_blank">Kuma Kubernetes Quickstart</a></td>
         </tr>
-    </tbody>
-    <thead style="background-color: white; color: #ff4d67">
-        <tr>
-          <th scope="col">Compatibility, Performance & Complexity</th>
+      <tr>
+          <th scope="row">Platform</th>
+          <td>Kubernetes, Consul & Nomad</td>
+          <td>Kubernetes</td>
+          <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
+          <td>Consul, Nomad, Kubernetes</td>
+          <td>Kubernetes</td>
+          <td>Kubernetes, “universal”</td>
         </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <th scope="row">Platform</th>
-              <td>Kubernetes, Consul & Nomad</td>
-              <td>Kubernetes</td>
-              <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
-              <td>Consul, Nomad, Kubernetes</td>
-              <td>Kubernetes</td>
-              <td>Kubernetes, “universal”</td>
-            </tr>
-            <tr>
-              <th scope="row">Automatic Sidecar Injection</th>
-              <td>yes</td>
-              <td>yes</td>
-              <td>yes</td>
-              <td>yes</td>
-              <td>yes (per Node)</td>
-              <td>yes</td>
-            </tr>
         <tr>
-          <th scope="row">Choose if...</th>
-          <td>...you need a lot of flexibility and your team isn't scared of technical complexity.</td>
-          <td>...you need a Mesh that requires little attention and that is performant and simple.</td>
-          <td>...you've got everything on AWS anyway and plan to stay.</td>
-          <td>...you're already using Consul and feel comfortable with it.</td>
-          <td>...you're willing to wait a couple of months before taking your mesh to production.</td>
-          <td>...you're just curious what the youngest Service Mesh Implementation is envisioning for the future</td>
+          <th scope="row">Automatic Sidecar Injection</th>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes (per Node)</td>
+          <td>yes</td>
         </tr>
-    </tbody>  
+
+      </tbody>
     <thead style="background-color: white; color: #ff4d67">
       <tr>
         <th scope="col">Supported Protocols</th>
@@ -360,6 +354,31 @@
         <td>yes</td>
       </tr>
     </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Advantages & Drawbacks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Advantages</th>
+        <td>Istio can be adapted and extended like no other Mesh. Thanks to it's big and vivid community, it's constantly improved. Istio is <a href="https://istio.io/about/community/customers/" target="_blank">used in production.</a></td>
+        <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. It therefore requires little time to adopt. Linkerd 2 is <a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">used in production.</a></td>
+        <td>AWS App Mesh is integrated in the AWS landscape and it is fully managed for you.</td>
+        <td>Consul Connect is well integrated with Consul and the Proxy can be changed and extended.</td>
+        <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
+        <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
+      </tr>
+      <tr>
+        <th scope="row">Drawbacks</th>
+        <td>Istio's flexibility can be overwhelming for teams who don't have capacity for more complex technology. Also, Istio takes control over the ingress controller.</td>
+        <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
+        <td>AWS App Mesh configuration cannot be migrated to an enviroment outside AWS.</td>
+        <td>Consul Connect can only be used in combination with Consul.</td>
+        <td>Maesh is still in an early state and not ready for production yet.</td>
+        <td>Kuma is still in an early state and not ready for production yet.</td>
+      </tr>
+  </tbody>  
   </table>
   <p>*Might be possible through manual configuration/templating of proxy.</p>
   </p>
