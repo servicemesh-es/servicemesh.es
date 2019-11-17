@@ -1,28 +1,27 @@
 <div class="page-layout-md--default">
   <h2 class="section-heading--primary"> How to choose a Service Mesh Implementation</h2>
   <p>
-    While Service Meshes have no impact on the code, they change operations procedures and require familiarization with new concepts and technology.
-    So - especially until the Service Mesh Interface is widely supported – adopting a Service Mesh implementation is a long term decision. 
+    While service meshes have no impact on the code, they change operations procedures and require familiarization with new concepts and technology.
+    So - especially until the Service Mesh Interface is widely supported – adopting a service mesh implementation is a long term decision. 
     Therefore, the implementations should to be compared and tested carefully in advance.
-    Choosing the most flexible Service Mesh with the most features seems logical at first. 
+    Choosing the most flexible service mesh with the most features seems logical at first. 
     But the contrary could be true, because features and flexibility is often paid with cognitive and technical complexity.
     <br>
     <br>  
     The goal of the evaluation is to figure out which features are important to you and how you benefit from them.
-    As Service Meshes impact the latency and the resource consumption, these disadvantages have to be measured, too.
+    As service meshes impact the latency and the resource consumption, these disadvantages have to be measured, too.
     <br>
     <br>  
-    We recommend to approach the decision like this:
-    <ol>
-        <li>As a team, identify the most important problems to be solved by the Service Mesh. Keep in mind that libraries or a adaptions to the architecture could be good alternatives in some cases (see below).</li>
+    We recommend to include the following steps in your decision process:
+    <ul>
+        <li>As a team, identify the most important problems to be solved by the service mesh. Keep in mind that libraries or a adaptions to the architecture could be good alternatives in some cases (see below).</li>
         <li>Dicuss your requirements regarding simplicity/usability, performance and compatibility.</li>
-        <li>Take a look at the table below and identify your top two or three implementations based on your needs.</li>
+        <li>Identify your top two or three implementations based on your feature and non-feature requirements. The table below should assist you.</li>
         <li>Try the implementations by executing their respective tutorials (links below) and possibly discard one candidate.</li>
-        <li>Now test the latency and resource overhead for your individual application. 
+        <li>Test the latency and resource overhead for your individual application. 
           For each service mesh candidates, setup an identical test environments and install the service mesh. 
           Setup an additional mesh-free environment. Install your application in all environments.
-          Perform a load test in all and measure request latency, CPU and memory consumption by using tools like <a href="https://locust.io" target="_blank">Locust</a> or <a href="https://https://fortio.org" target="_blank">Fortio</a>.</li>
-        <li>Discuss the results and experiences.</li>
-    </ol>
+          Perform a load test in all and measure request latency, CPU and memory consumption by using tools like <a href="https://locust.io" target="_blank">Locust</a> or <a href="https://https://fortio.org" target="_blank">Fortio</a>.</li
+    </ul>
   </p>
 </div>
