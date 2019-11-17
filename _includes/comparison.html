@@ -83,7 +83,7 @@
           <td>ECS, Fargate, EKS, EC2</td>
           <td>Consul, Nomad, Kubernetes</td>
           <td>Kubernetes</td>
-          <td>Kubernetes, “universal”</td>
+          <td>Kubernetes, VMs (Universal)</td>
         </tr>
         <tr>
           <th scope="row">Automatic Sidecar Injection</th>
@@ -153,7 +153,7 @@
         <td>in preview</td>
         <td>yes</td>
         <td></td>
-        <td></td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">gRPC</th>
@@ -162,7 +162,7 @@
         <td>in preview</td>
         <td>yes</td>
         <td></td>
-        <td></td>
+        <td>yes</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -173,35 +173,35 @@
     <tbody>
       <tr>
         <th scope="row">Traffic Access Control</th>
-        <td>yes</td>
+        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
-        <td>yes</td>
-        <td>yes</td>
+        <td><a href="https://github.com/hashicorp/consul-smi-controller" target="_blank">yes</a></td>
+        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
-      <tr>
+      <tr>  
         <th scope="row">Traffic Specs</th>
-        <td>yes</td>
+        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
-        <td>yes</td>
+        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
         <th scope="row">Traffic Split</th>
-        <td>yes</td>
+        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
         <td>yes</td>
         <td>no</td>
         <td>no</td>
-        <td>yes</td>
+        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
         <th scope="row">Traffic Metrics</th>
-        <td>yes</td>
-        <td>yes</td>
+        <td><a href="https://github.com/deislabs/smi-metrics/tree/master/pkg/istio" target="_blank">yes</a></td>
+        <td><a href="https://github.com/deislabs/smi-metrics/tree/master/pkg/linkerd" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
@@ -275,7 +275,7 @@
         <td>AWS X-Ray</td>
         <td>Datadog, Jaeger, OpenTracing, Honeycomb, Zipkin</td>
         <td>Jaeger</td>
-        <td></td>
+        <td>all Backends supporting OpenTracing</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -291,7 +291,7 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
-        <td></td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
