@@ -1,0 +1,54 @@
+<div class="page-layout-xl--default">
+  <h2 class="section-heading--primary">Alternatives to Service Meshes</h2>
+  
+  <p>
+  Undoubtedly, Service Mesh is a useful pattern and some current implementations are very promising. But they also go along with challenges such as cognitive and technical complexity. 
+  Like any tool, they are not useful in every situation. Sometimes it might be a wise to keep existing well-known <a href="https://mcfunley.com/choose-boring-technology" target="_blank">"boring" technology</a> or to go with alternative solutions.
+</p>
+
+  <div class="blocks">
+
+    <div class="list-teaser list-teaser__body">
+      <h2 class="list-teaser__headline">Libraries</h2>
+      <p class="list-teaser__text">
+        Libraries are included in the Microservices. 
+        The drawbacks are dependencies on specific technologies/languages, 
+        potential inconsistency in implementations and 
+        missing separation of service infrastructure and business logic. 
+        <br>
+        <br>
+        However, the developer productivity can (at least in the short term) be better through the familiar use of libraries. 
+        Also, sometimes domain knowledge is needed, for example to configure the fallback for a circuit breaker or to define business metrics. 
+        In these cases, a Service Mesh is of no use. 
+        <br>
+        <br>
+        Service meshes require a change to the infrastructure. So it is not possible to use them if the
+        the infrastructure can or should not be changed. Sometimes the risk of changing the infrastructure is
+        deemed to high even though services meshes can be applied to specific services only.
+      </p>
+    </div>
+
+    <div class="list-teaser list-teaser__body">
+      <h2 class="list-teaser__headline">No (synchronous) Microservices</h2>
+      <p class="list-teaser__text">
+        Service meshes are in particular helpful for synchronous communication.
+        They usually rely on the HTTP protocol to transfer additional information and e.g. understand if a call failed.
+        <br>
+        <br>
+        One of the reasons for adopting microservices is their potential to reduce the time-to-market for software.
+        Despite several drawbacks such as high latency and tight coupling, it's a common practice to implement Microservice communictaion synchronously.
+        <br>
+        <br>
+        Howver, it is overseen that there are more approaches to perform microservice communication or to even avoid dependencies in the first place. (Read more in the free <a href="https://leanpub.com/microservices-recipes" target="_blank">Microservices Recipes Book</a>)
+        Patterns like SCS and asynchronous communication aim to mitigate many problems of classic (synchronously communicating) mircoservices.
+        Of course you can have asynchronous microservices with HTTP e.g. by polling a feed for new events.
+        As service meshes rely on HTTP, they would still be of some use.
+        However, features e.g. for resilience are of less use as asynchronous communication supports resilience anyway.
+        <br>
+        <br>
+        Unjustifiably, monolithic architectures are often not even considered as a solution.
+        Obviously, service meshes can only help a monolith with the communication to other systems but not with the internal communication.
+      </p>
+    </div>
+  </div>    
+</div>

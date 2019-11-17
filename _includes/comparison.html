@@ -1,5 +1,5 @@
 <div class="page-layout-xl--default">
-  <h2 class="section-heading--primary"> Technical Comparison </h2>
+  <h2 class="section-heading--primary"> Service Mesh Comparison </h2>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -7,7 +7,7 @@
         <th scope="col">Istio</th>
         <th scope="col">Linkerd 2</th>
         <th scope="col">AWS App Mesh</th>
-        <th scope="col">Consul</th>
+        <th scope="col">Consul Connect</th>
         <th scope="col">Maesh</th>
         <th scope="col">Kuma</th>
       </tr>
@@ -45,29 +45,83 @@
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">linkerd-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
-        <td>defaults to<a href="https://www.envoyproxy.io" target="_blank"> Envoy </a>exchangeable</td>
+        <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
         <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
       </tr>
       <tr>
-        <th scope="row">Platform</th>
-        <td>Kubernetes, Consul & Nomad</td>
-        <td>Kubernetes</td>
-        <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
-        <td>Kubernetes, Nomad, standalone</td>
-        <td>Kubernetes</td>
-        <td>Kubernetes, VMs (Universal)</td>
+        <th scope="row">Ingress Controller</th>
+        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a></td>
+        <td>any</td>
+        <td></td>
+        <td>any</td>
+        <td>any</td>
+        <td>any</td>
       </tr>
       <tr>
-        <th scope="row">Automatic Sidecar Injection</th>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes (per Node)</td>
-        <td>yes</td>
-      </tr>
-    </tbody>
+          <th scope="row">Governance</th>
+          <td>see <a href="https://github.com/istio/community" target="_blank">Istio Community</a></td>
+          <td>see <a href="https://github.com/linkerd/linkerd2/blob/master/GOVERNANCE.md" target="_blank">Linkerd Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
+          <td>AWS</td>
+          <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
+          <td>see <a href="https://github.com/containous/maesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
+          <td>see <a href="https://github.com/Kong/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
+        </tr>
+      <tr>
+          <th scope="row">Tutorial</th>
+          <td><a href="https://istio.io/docs/tasks/" target="_blank">Istio Tasks</a></td>
+          <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
+          <td><a href="docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
+          <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">Hashicorp Learn platform</a></td>
+          <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
+          <td><a href="https://kuma.io/docs/0.2.2/installation/kubernetes/#kubernetes" target="_blank">Kuma Kubernetes Quickstart</a></td>
+        </tr>
+      <tr>
+          <th scope="row">Platform</th>
+          <td>Kubernetes, Consul & Nomad</td>
+          <td>Kubernetes</td>
+          <td>ECS, Fargate, EKS, EC2</td>
+          <td>Consul, Nomad, Kubernetes</td>
+          <td>Kubernetes</td>
+          <td>Kubernetes, VMs (Universal)</td>
+        </tr>
+        <tr>
+          <th scope="row">Automatic Sidecar Injection</th>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes (per Node)</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+            <th scope="row">Used in production</th>
+            <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
+            <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Advantages</th>
+            <td>Istio can be adapted and extended like no other Mesh. It's many features are available for Kubernetes and other platforms.</a></td>
+            <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. It therefore requires little time to adopt.</td>
+            <td>AWS App Mesh is integrated in the AWS landscape and it is fully managed for you.</td>
+            <td>Consul Connect can be used in any Consul enviroment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
+            <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
+            <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
+          </tr>
+          <tr>
+            <th scope="row">Drawbacks</th>
+            <td>Istio's flexibility can be overwhelming for teams who don't have capacity for more complex technology. Also, Istio takes control over the ingress controller.</td>
+            <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
+            <td>AWS App Mesh configuration cannot be migrated to an enviroment outside AWS.</td>
+            <td>Consul Connect can only be used in combination with Consul.</td>
+            <td>Maesh is still in an early state. That might be a risk for production.</td>
+            <td>Kuma is still in an early state. That might be a risk for production.</td>
+          </tr>
+      </tbody>  
     <thead style="background-color: white; color: #ff4d67">
       <tr>
         <th scope="col">Supported Protocols</th>
