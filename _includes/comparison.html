@@ -80,7 +80,7 @@
           <th scope="row">Platform</th>
           <td>Kubernetes, Consul & Nomad</td>
           <td>Kubernetes</td>
-          <td>Kubernetes, ECS, Fargate, EKS, EC2</td>
+          <td>ECS, Fargate, EKS, EC2</td>
           <td>Consul, Nomad, Kubernetes</td>
           <td>Kubernetes</td>
           <td>Kubernetes, “universal”</td>
@@ -94,8 +94,34 @@
           <td>yes (per Node)</td>
           <td>yes</td>
         </tr>
-
-      </tbody>
+        <tr>
+            <th scope="row">Used in production</th>
+            <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
+            <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Advantages</th>
+            <td>Istio can be adapted and extended like no other Mesh. It's many features are available for Kubernetes and other platforms.</a></td>
+            <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. It therefore requires little time to adopt.</td>
+            <td>AWS App Mesh is integrated in the AWS landscape and it is fully managed for you.</td>
+            <td>Consul Connect can be used in any Consul enviroment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
+            <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
+            <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
+          </tr>
+          <tr>
+            <th scope="row">Drawbacks</th>
+            <td>Istio's flexibility can be overwhelming for teams who don't have capacity for more complex technology. Also, Istio takes control over the ingress controller.</td>
+            <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
+            <td>AWS App Mesh configuration cannot be migrated to an enviroment outside AWS.</td>
+            <td>Consul Connect can only be used in combination with Consul.</td>
+            <td>Maesh is still in an early state. That might be a risk for production.</td>
+            <td>Kuma is still in an early state. That might be a risk for production.</td>
+          </tr>
+      </tbody>  
     <thead style="background-color: white; color: #ff4d67">
       <tr>
         <th scope="col">Supported Protocols</th>
@@ -354,40 +380,6 @@
         <td>yes</td>
       </tr>
     </tbody>
-    <thead style="background-color: white; color: #ff4d67">
-      <tr>
-        <th scope="col">Advantages & Drawbacks</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <th scope="row">Used in production</th>
-          <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
-          <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      <tr>
-        <th scope="row">Advantages</th>
-        <td>Istio can be adapted and extended like no other Mesh. It's many features are available for Kubernetes and other platforms. Istio is backed by a large community.</a></td>
-        <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. It therefore requires little time to adopt.</td>
-        <td>AWS App Mesh is integrated in the AWS landscape and it is fully managed for you.</td>
-        <td>Consul Connect can be used in any Consul enviroment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
-        <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
-        <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
-      </tr>
-      <tr>
-        <th scope="row">Drawbacks</th>
-        <td>Istio's flexibility can be overwhelming for teams who don't have capacity for more complex technology. Also, Istio takes control over the ingress controller.</td>
-        <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
-        <td>AWS App Mesh configuration cannot be migrated to an enviroment outside AWS.</td>
-        <td>Consul Connect can only be used in combination with Consul.</td>
-        <td>Maesh is still in an early state. That might be a risk for production.</td>
-        <td>Kuma is still in an early state. That might be a risk for production.</td>
-      </tr>
-  </tbody>  
   </table>
   <p>*Might be possible through manual configuration/templating of proxy.</p>
   </p>
