@@ -17,11 +17,11 @@
         <li>As a team, identify the most important problems to be solved by the Service Mesh. Keep in mind that libraries or a adaptions to the architecture could be good alternatives in some cases (see below).</li>
         <li>Dicuss your requirements regarding simplicity/usability, performance and compatibility.</li>
         <li>Take a look at the table below and identify your top two or three implementations based on your needs.</li>
-        <li>Try the implementations by executing their respective tutorials (links below).</li>
-        <li>You may discard one candidate if you started with three.</li>
-        <li>Setup three identical test environments.</li>
-        <li>In two, install your Service Mesh candidates and install your application in all three.</li>
-        <li>Perform a load test in all three and measure request latency, CPU and memory consumption by using tools like <a href="https://locust.io" target="_blank">Locust</a> or <a href="https://https://fortio.org" target="_blank">Fortio</a>.</li>
+        <li>Try the implementations by executing their respective tutorials (links below) and possibly discard one candidate.</li>
+        <li>Now test the latency and resource overhead for your individual application. 
+          For each service mesh candidates, setup an identical test environments and install the service mesh. 
+          Setup an additional mesh-free environment. Install your application in all environments.
+          Perform a load test in all and measure request latency, CPU and memory consumption by using tools like <a href="https://locust.io" target="_blank">Locust</a> or <a href="https://https://fortio.org" target="_blank">Fortio</a>.</li>
         <li>Discuss the results and experiences.</li>
     </ol>
   </p>
