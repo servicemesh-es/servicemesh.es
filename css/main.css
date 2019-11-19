@@ -24,6 +24,12 @@ book {
     width: 350px;
 }
 
-.book__image {
+.responsive-image {
     max-width: 100%;
+}
+
+.service-mesh-icon {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
 }
