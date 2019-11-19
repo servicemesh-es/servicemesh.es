@@ -16,8 +16,13 @@ a:not([class]):focus {
     text-decoration: none;
 }
 
+.footer__paragraph,
 .footer__logo {
     margin-top: 1rem;
+}
+
+.license__image {
+    margin-bottom: 1rem;
 }
 
 book {
