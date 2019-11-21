@@ -38,3 +38,9 @@ book {
     width: 100px;
     margin: 0 auto;
 }
+
+.table-head {
+  position: sticky;
+  top: 0;
+  background-color: #24244C;
+}
