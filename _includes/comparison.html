@@ -286,7 +286,7 @@
     <tbody>
       <tr>
         <th scope="row">Load Balancing</th>
-        <td><a href="https://istio.io/docs/concepts/traffic-management/#load-balancing-options" target="_blank">yes (Round Robin, Random, Least Connction)</a></td>
+        <td><a href="https://istio.io/docs/concepts/traffic-management/#load-balancing-options" target="_blank">yes (Round Robin, Random, Least Connection)</a></td>
         <td>yes (<a href="https://linkerd.io/2/features/load-balancing/" target="_blank">EWMA</a> exponentially weighted moving average)</td>
         <td>yes</td>
         <td>yes</td>
@@ -332,7 +332,7 @@
         <td><a href="https://istio.io/docs/concepts/traffic-management/#timeouts" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/retries-and-timeouts/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html"target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/connect/proxies/built-in.html" target="_blank">Timeout yes</a>, Retry no*</td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</td>
         <td><a href="https://docs.mae.sh/configuration/" target="_blank">yes</a></td>
         <td>no*</td>
       </tr>
@@ -341,7 +341,7 @@
         <td>no</td>
         <td>yes</td>
         <td>yes</td>
-        <td>no</td>
+        <td>yes</td>
         <td>no</td>
         <td>no</td>
       </tr>
@@ -375,7 +375,7 @@
         <td><a href="https://istio.io/docs/concepts/security/#mutual-tls-authentication" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a>, not for TCP</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">In preview</a></td>
-        <td>yes. Optional integration with <a href="https://www.vaultproject.io" target="_blank">Vault</a></td>
+        <td><a href="https://www.consul.io/docs/connect/connect-internals.html#mutual-transport-layer-security-mtls-" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/#mtls" target="_blank">yes</a></td>
       </tr>
