@@ -224,7 +224,7 @@
         <td>yes</td>
       </tr>
       <tr>
-        <th scope="row">“Golden Signal” Metrics Generation</th>
+        <th scope="row"><a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals" target="_blank">"Golden Signal”</a> Metrics Generation</th>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -251,7 +251,7 @@
         <td>no</td>
       </tr>
       <tr>
-        <th scope="row">Per-Route Metrics</th>
+        <th scope="row">Per-Route Metrics<small class="form-text">Collect values for each HTTP endpoint individually</small></th>
         <td>no</td>
         <td><a href="https://linkerd.io/2/tasks/getting-per-route-metrics/" target="_blank">yes</a></td>
         <td></td>
@@ -273,7 +273,7 @@
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="http://www.solarwinds.com" target="_blank">Solarwinds</a></td>
         <td>all Backends supporting <a href="https://opencensus.io/service/exporters" target="_blank">OpenCensus</a></td>
         <td><a href="http://aws.amazon.com/xray/" target="_blank">AWS X-Ray</a></td>
-        <td>Datadog, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
+        <td><a href="https://www.datadoghq.com" target="_blank">Datadog</a>, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
         <td>all Backends supporting <a href="https://opentracing.io" target="_blank">OpenTracing</a></td>
       </tr>
@@ -287,7 +287,7 @@
       <tr>
         <th scope="row">Load Balancing</th>
         <td><a href="https://istio.io/docs/concepts/traffic-management/#load-balancing-options" target="_blank">yes (Round Robin, Random, Least Connection)</a></td>
-        <td>yes (<a href="https://linkerd.io/2/features/load-balancing/" target="_blank">EWMA</a> exponentially weighted moving average)</td>
+        <td>yes (<a href="https://linkerd.io/2/features/load-balancing/" target="_blank">EWMA</a>, exponentially weighted moving average)</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -296,18 +296,18 @@
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/traffic-shifting/#apply-weight-based-routing" target="_blank">yes</a></td>
-        <td>yes, through SMI</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
+        <td>yes, through <a href="https://github.com/deislabs/smi-spec/blob/master/traffic-split.md" target="_blank">SMI</a></td> 
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter.html" target="_blank">yes</a></td> 
+        <td>yes, through <a href="https://github.com/deislabs/smi-spec/blob/master/traffic-split.md" target="_blank">SMI</a></td>
+        <td><a href="https://kuma.io/docs/0.3.2/policies/#traffic-route" target="_blank">yes</a></td>
       </tr>
       <tr>
-        <th scope="row">Header- and Path-based Traffic Splits</th>
+        <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/request-routing/" target="_blank">yes</a></td>
         <td>no</td>
-        <td>yes</td>
-        <td>yes</td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a> </td> 
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a></td> 
         <td>no</td>
         <td>no*</td>
       </tr>
@@ -337,11 +337,11 @@
         <td>no*</td>
       </tr>
       <tr>
-        <th scope="row">Path-based Retry & Timeout</th>
+        <th scope="row">Path-based Retry & Timeout<small class="form-text">Different retry and timeout config for each endpoint</small></th>
         <td>no</td>
-        <td>yes</td>
-        <td>yes</td>
-        <td>yes</td>
+        <td><a href="https://linkerd.io/2/tasks/configuring-retries/" target="_blank">yes</a></td> 
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a> </td>
         <td>no</td>
         <td>no</td>
       </tr>
@@ -390,7 +390,7 @@
       </tr>
     </tbody>
   </table>
-  <p>*Might be possible through manual configuration/templating of proxy.</p>
+  <p><small class="form-text" style="text-align: right;">*Might be possible through manual configuration/templating of proxy.</small></p>
   </p>
   <p class="pullquote">Found a mistake? Or have something to add? We appreciate your issues or pull requests on <a href="https://github.com/servicemesh-es/servicemesh.es" target="_blank">GitHub</a>!</p>
 </div>
