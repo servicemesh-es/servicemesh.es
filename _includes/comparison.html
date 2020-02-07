@@ -76,15 +76,6 @@
           <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
           <td><a href="https://kuma.io/docs/0.2.2/installation/kubernetes/#kubernetes" target="_blank">Kuma Kubernetes Quickstart</a></td>
         </tr>
-      <tr>
-          <th scope="row">Platform</th>
-          <td>Kubernetes</td>
-          <td>Kubernetes</td>
-          <td>ECS, Fargate, EKS, EC2</td>
-          <td>Kubernetes, Nomad, VMs (Universal)</td>
-          <td>Kubernetes</td>
-          <td>Kubernetes, VMs (Universal)</td>
-        </tr>
         <tr>
           <th scope="row">Automatic Sidecar Injection</th>
           <td>yes</td>
@@ -167,7 +158,41 @@
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
       <tr>
-        <th scope="col">Service Mesh Interface compatibility</th>
+        <th scope="col">Platform and Extensibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Platform</th>
+        <td>Kubernetes</td>
+        <td>Kubernetes</td>
+        <td>ECS, Fargate, EKS, EC2</td>
+        <td>Kubernetes, Nomad, VMs (Universal)</td>
+        <td>Kubernetes</td>
+        <td>Kubernetes, VMs (Universal)</td>
+      </tr>
+      <tr>
+        <th scope="row">Mesh Expansion<small class="form-text">Extension of the Mesh by containers/VMs outside the cluster</small></th>
+        <td><a href="https://istio.io/docs/examples/virtual-machines/" target="_blank">yes</a></td>
+        <td>no</td>
+        <td>yes, within AWS</td>
+        <td><a href="https://www.consul.io/docs/connect/registration.html" target="_blank">yes</a></td>
+        <td>no</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Multi-Cluster Mesh<small class="form-text">Control and observe multiple clusters</small></th>
+        <td><a href="https://istio.io/docs/setup/install/multicluster/" target="_blank">yes</a></td>
+        <td>no</td>
+        <td></td>
+        <td><a href="https://www.consul.io/docs/connect/mesh_gateway.html" target="_blank">yes</a></td>
+        <td>no</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Service Mesh Interface Compatibility</th>
       </tr>
     </thead>
     <tbody>
