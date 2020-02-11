@@ -16,7 +16,7 @@
       <tr>
         <th scope="row">Current version</th>
         <td>1.4</td>
-        <td>2.6</td>
+        <td>2.7</td>
         <td></td>
         <td>1.6</td>
         <td>1.0</td>
@@ -399,10 +399,19 @@
         <th scope="row">mTLS</th>
         <td><a href="https://istio.io/docs/concepts/security/#mutual-tls-authentication" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a>, not for TCP</td>
-        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">In preview</a></td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">in preview</a></td>
         <td><a href="https://www.consul.io/docs/connect/connect-internals.html#mutual-transport-layer-security-mtls-" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/#mtls" target="_blank">yes</a></td>
+      </tr>
+      <tr>
+        <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
+        <td><a href="https://istio.io/docs/tasks/security/citadel-config/plugin-ca-cert/" target="_blank">yes</a></td>
+        <td><a href="https://linkerd.io/2/tasks/use_external_certs/" target="_blank">yes</a></td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>  
+        <td><a href=https://www.consul.io/docs/connect/ca/consul.html#specifying-a-custom-private-key-and-root-certificate" target="_blank">yes</a></td>
+        <td>no</td>
+        <td><a href="https://kuma.io/docs/0.3.2/policies/#provided-ca" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Authorization Rules</th>
