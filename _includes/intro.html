@@ -8,13 +8,29 @@
     In contrast to libraries, which are used for similar functionality, a service mesh does not require code changes. 
     Instead, it adds a layer of additional containers that implement the features reliably and agnostic to technology or programming language.
   </p>
+
+  <div class="eyecatcher" style="background-color: #D8D8D8">
+    <h4> Service Mesh Architecture </h4>
+    <figure style="margin-bottom: 0;">
+  <img width="100%" src="img/servicemesh.png" style="background-color:white;"
+  alt="An image showing a comparison of a two-service microservice architecture with and without a Service Mesh.">
+  </img>
   
-  <video width="100%" autoplay onclick="this.play()">
-    <source src="img/servicemesh.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
   <br/>
   <br/>
+
+  <figcaption >
+    <b>Without a Service Mesh</b>, each Microservice implements Business Logic and Cross Cutting Concerns (CCC) by itself. <br>
+   <b>With a Service Mesh</b>, Cross Cutting Concers (CCC) like traffic metrics, routing, and encryption are moved ouf the Microservice and into a proxy. 
+    Business Logic and Business Metrics stay in the Microservice. Incoming and outgoing requests are transparently routed through the proxys. 
+    In addition to a layer of Proxys (Data Plane), a Service Mesh adds a so-called Control Plane. If distributes configuration updates to all proxys 
+    and receives metrics collected by the proxys for further processing, e.g. by monitoring infrastructure such as Prometheus.
+  </figcaption>
+</figure>
+</div>
+
+<br/>
+<br/>
 
   <h3> Who needs a Service Mesh? </h3>
   <p>
