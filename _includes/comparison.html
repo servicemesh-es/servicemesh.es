@@ -20,7 +20,7 @@
         <td></td>
         <td>1.7</td>
         <td>1.0</td>
-        <td>0.3</td>
+        <td>0.4</td>
       </tr>
       <tr>
         <th scope="row">License</th>
@@ -60,7 +60,7 @@
       </tr>
       <tr>
           <th scope="row">Governance</th>
-          <td>see <a href="https://github.com/istio/community" target="_blank">Istio Community</a></td>
+          <td>see <a href="https://github.com/istio/community#istio-community" target="_blank">Istio Community</a></td>
           <td>see <a href="https://github.com/linkerd/linkerd2/blob/master/GOVERNANCE.md" target="_blank">Linkerd Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>AWS</td>
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
@@ -71,10 +71,10 @@
           <th scope="row">Tutorial</th>
           <td><a href="https://istio.io/docs/tasks/" target="_blank">Istio Tasks</a></td>
           <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
-          <td><a href="docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
+          <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
           <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
-          <td><a href="https://kuma.io/docs/0.2.2/installation/kubernetes/#kubernetes" target="_blank">Kuma Kubernetes Quickstart</a></td>
+          <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
         </tr>
         <tr>
           <th scope="row">Automatic Sidecar Injection</th>
@@ -273,7 +273,7 @@
         <td>no</td>
         <td>no</td>
         <td>yes</td>
-        <td>no</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Per-Route Metrics<small class="form-text">Collect values for each HTTP endpoint individually</small></th>
@@ -291,7 +291,7 @@
         <td>yes, <a href="http://aws.amazon.com/cloudwatch/" target="_blank">AWS Cloud Watch</a></td>
         <td>yes, showing configuration and availability only</td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/documentation/#gui" target="_blank">yes</a>, showing configuration only</td>
+        <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, showing configuration only</td>
       </tr>
       <tr>
         <th scope="row">Compatible Tracing-Backends</th>
@@ -325,7 +325,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter.html" target="_blank">yes</a></td> 
         <td>yes, through <a href="https://github.com/deislabs/smi-spec/blob/master/traffic-split.md" target="_blank">SMI</a></td>
-        <td><a href="https://kuma.io/docs/0.3.2/policies/#traffic-route" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/latest/policies/traffic-route/" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
@@ -402,7 +402,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">in preview</a></td>
         <td><a href="https://www.consul.io/docs/connect/connect-internals.html#mutual-transport-layer-security-mtls-" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/documentation/#mtls" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
@@ -411,7 +411,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>  
         <td><a href=https://www.consul.io/docs/connect/ca/consul.html#specifying-a-custom-private-key-and-root-certificate" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/0.3.2/policies/#provided-ca" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#provided-ca" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Authorization Rules</th>
@@ -420,7 +420,7 @@
         <td></td>
         <td><a href="https://www.consul.io/docs/connect/intentions.html" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/0.3.1/policies/#traffic-permissions" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
       </tr>
     </tbody>
   </table>
