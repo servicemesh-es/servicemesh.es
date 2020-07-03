@@ -1,3 +1,5 @@
+![Service Mesh Comparison](img/mstile-150x150.png)
+
 # servicemesh.es | Service Mesh Comparison
 
 This repository contains the content of [servicemesh.es](http://servicemesh.es), which aims to support decision making on Service Mesh technology and implementations.
