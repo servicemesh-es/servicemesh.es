@@ -10,6 +10,7 @@
         <th class="table-head scope="col">Consul Connect</th>
         <th class="table-head scope="col">Maesh</th>
         <th class="table-head scope="col">Kuma</th>
+        <th class="table-head scope="col">Open Service Mesh (OSM)</th>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,7 @@
         <td>1.8</td>
         <td>1.3</td>
         <td>0.7</td>
+        <td>0.1</td>
       </tr>
       <tr>
         <th scope="row">License</th>
@@ -30,6 +32,7 @@
         <td>Mozilla License</td>
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
+        <td>MIT License</td>
       </tr>
       <tr>
         <th scope="row">Developed by</th>
@@ -39,6 +42,7 @@
         <td>HashiCorp</td>
         <td>Containous</td>
         <td>Kong</td>
+        <td>Microsoft</td>
       </tr>
       <tr>
         <th scope="row">Service Proxy</th>
@@ -47,6 +51,7 @@
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
         <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
       </tr>
       <tr>
@@ -57,6 +62,7 @@
         <td><a href="https://www.hashicorp.com/blog/ingress-gateways-in-hashicorp-consul-1-8/" target="_blank">Envoy</a> and <a href="https://www.consul.io/docs/k8s/ambassador" target="_blank">Ambassador in Kubernetes</a></td>
         <td>any</td>
         <td>any</td>
+        <td>Nginx, Azure Application Gateway Ingress Controller</td>
       </tr>
       <tr>
           <th scope="row">Governance</th>
@@ -66,6 +72,7 @@
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
           <td>see <a href="https://github.com/containous/maesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
           <td>see <a href="https://github.com/Kong/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/Kong/kuma/blob/01b55190c928ec3b76fca58a86cd9a0c0ae80de7/GOVERNANCE.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
+          <td>see <a href="https://cla.opensource.microsoft.com/openservicemesh/osm" target="_blank">Microsoft OpenSource</a></td>
         </tr>
       <tr>
           <th scope="row">Tutorial</th>
@@ -75,6 +82,7 @@
           <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
           <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
+          <td><a href="https://github.com/openservicemesh/osm#getting-started" target="_blank">Install OSM on Kubernetes</a></td>
         </tr>
         <tr>
           <th scope="row">Automatic Sidecar Injection</th>
@@ -84,11 +92,13 @@
           <td>yes</td>
           <td>yes (per Node)</td>
           <td>yes</td>
+          <td>yes</td>
         </tr>
         <tr>
             <th scope="row">Used in production</th>
             <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
             <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -102,6 +112,7 @@
             <td>Consul Connect can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
             <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
             <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">Drawbacks</th>
@@ -111,6 +122,7 @@
             <td>Consul Connect can only be used in combination with Consul.</td>
             <td>Maesh currently does not support transparent TLS encryption.</td>
             <td>Kuma is still in an early state. That might be a risk for production.</td>
+            <td></td>
           </tr>
       </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -127,9 +139,11 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">HTTP/1.1+</th>
+        <td>yes</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -145,6 +159,7 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">gRPC</th>
@@ -153,7 +168,8 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
-        <td>no</td>
+        <td>yes</td>
+        <td>yes</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -170,6 +186,7 @@
         <td>Kubernetes, Nomad, VMs (Universal)</td>
         <td>Kubernetes</td>
         <td>Kubernetes, VMs (Universal)</td>
+        <td>Kubernetes</td>
       </tr>
       <tr>
         <th scope="row">Cloud Integrations</th>
@@ -177,6 +194,7 @@
         <td><a href="https://marketplace.digitalocean.com/apps/linkerd" target="_blank">DigitalOcean</a></td>
         <td><a href="https://aws.amazon.com/app-mesh/" target="_blank">AWS</a></td>
         <td><a href="https://www.hashicorp.com/products/consul/service-on-azure/" target="_blank">Microsoft Azure</a></td>
+        <td></td>
         <td></td>
         <td></td>
       </tr>
@@ -188,6 +206,7 @@
         <td><a href="https://www.consul.io/docs/connect/registration.html" target="_blank">yes</a></td>
         <td>no</td>
         <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">Multi-Cluster Mesh<small class="form-text">Control and observe multiple clusters</small></th>
@@ -197,6 +216,7 @@
         <td><a href="https://www.consul.io/docs/connect/mesh_gateway.html" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/0.6.0/policies/mesh/" target="_blank">yes</a></td>
+        <td>no</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -207,39 +227,43 @@
     <tbody>
       <tr>
         <th scope="row">Traffic Access Control</th>
-        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
+        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td><a href="https://github.com/hashicorp/consul-smi-controller" target="_blank">yes</a></td>
         <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
+        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Traffic Specs</th>
-        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
+        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
         <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
+        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Traffic Split</th>
-        <td><a href="https://github.com/deislabs/smi-adapter-istio" target="_blank">yes</a></td>
+        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/traffic-split/" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
         <td>no</td>
+        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Traffic Metrics</th>
-        <td><a href="https://github.com/deislabs/smi-metrics/tree/master/pkg/istio" target="_blank">yes</a></td>
-        <td><a href="https://github.com/deislabs/smi-metrics/tree/master/pkg/linkerd" target="_blank">yes</a></td>
+        <td><a href="https://github.com/servicemeshinterface/smi-metrics/tree/master/pkg/istio" target="_blank">yes</a></td>
+        <td><a href="https://github.com/servicemeshinterface/smi-metrics/tree/master/pkg/linkerd" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
+        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -256,6 +280,7 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row"><a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals" target="_blank">"Golden Signal”</a> Metrics Generation</th>
@@ -265,6 +290,7 @@
         <td>yes, depending on the proxy used</td>
         <td>yes</td>
         <td>no*</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Integrated, pre-configured Prometheus	</th>
@@ -274,6 +300,7 @@
         <td>no</td>
         <td>yes</td>
         <td>no</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Integrated, pre-configured Grafana</th>
@@ -281,6 +308,7 @@
         <td>yes</td>
         <td>no</td>
         <td>no</td>
+        <td>yes</td>
         <td>yes</td>
         <td>yes</td>
       </tr>
@@ -291,7 +319,8 @@
         <td></td>
         <td>depending on the proxy used</td>
         <td></td>
-        <td>no</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">Dashboard</th>
@@ -301,6 +330,7 @@
         <td>yes, showing configuration and availability only</td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, showing configuration only</td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Compatible Tracing-Backends</th>
@@ -310,6 +340,7 @@
         <td><a href="https://www.datadoghq.com" target="_blank">Datadog</a>, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
         <td>all Backends supporting <a href="https://opentracing.io" target="_blank">OpenTracing</a></td>
+        <td>Zipkin</td>
       </tr>
       <tr>
         <th scope="row">Integrated, pre-configured Tracing-Backends</th>
@@ -319,6 +350,7 @@
         <td><a href="https://github.com/hashicorp/consul-demo-tracing" target="_blank">no</a></td>
         <td><a href="https://github.com/containous/maesh/pull/79" target="_blank">yes, Jaeger</a></td>
         <td><a href="https://kuma.io/docs/0.5.0/policies/traffic-trace/" target="_blank">yes, Jaeger</a></td>
+        <td></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -335,15 +367,17 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/traffic-shifting/#apply-weight-based-routing" target="_blank">yes</a></td>
-        <td>yes, through <a href="https://github.com/deislabs/smi-spec/blob/master/traffic-split.md" target="_blank">SMI</a></td> 
+        <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter.html" target="_blank">yes</a></td> 
-        <td>yes, through <a href="https://github.com/deislabs/smi-spec/blob/master/traffic-split.md" target="_blank">SMI</a></td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-route/" target="_blank">yes</a></td>
+        <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
+        <td>yes</td>
+        <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
       </tr>
       <tr>
         <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
@@ -353,6 +387,7 @@
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a></td> 
         <td>no</td>
         <td>no*</td>
+        <td>Header-based via <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -369,6 +404,7 @@
         <td><a href="https://www.consul.io/docs/connect/proxies/envoy.html#limits" target="_blank">yes</a></td>
         <td><a href="https://docs.mae.sh/configuration/#circuit-breaker" target="_blank">yes</a></td>
         <td>no*</td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Retry & Timeout</th>
@@ -378,6 +414,7 @@
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</td>
         <td><a href="https://docs.mae.sh/configuration/" target="_blank">yes</a></td>
         <td>no*</td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Path-based Retry & Timeout<small class="form-text">Different retry and timeout config for each endpoint</small></th>
@@ -385,6 +422,7 @@
         <td><a href="https://linkerd.io/2/tasks/configuring-retries/" target="_blank">yes</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a> </td>
+        <td>no</td>
         <td>no</td>
         <td>no</td>
       </tr>
@@ -396,6 +434,7 @@
         <td>no*</td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/0.5.0/policies/fault-injection/" target="_blank">yes</a></td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Delay Injection</th>
@@ -405,6 +444,7 @@
         <td>no*</td>
         <td>no</td>
         <td>no*</td>
+        <td>no</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -421,6 +461,7 @@
         <td><a href="https://www.consul.io/docs/connect/connect-internals.html#mutual-transport-layer-security-mtls-" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md" target="_blank"></a>yes</a></td>
       </tr>
       <tr>
         <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
@@ -430,6 +471,7 @@
         <td><a href=https://www.consul.io/docs/connect/ca/consul.html#specifying-a-custom-private-key-and-root-certificate" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/0.5.0/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md#using-hashicorp-vault" target="_blank">HashiCorp Vault</a></td>
       </tr>
       <tr>
         <th scope="row">Authorization Rules</th>
@@ -439,6 +481,7 @@
         <td><a href="https://www.consul.io/docs/connect/intentions.html" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/example/README.md#access-control-policies" target="_blank">yes</a></td>  
       </tr>
     </tbody>
     <tfoot>
