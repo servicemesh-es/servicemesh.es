@@ -83,7 +83,7 @@
           <div style="height: 100px" class="link-block" > <img src="img/smi.png"/ class="img-center" height="75px"> </div>
           <h2 class="list-teaser__headline">Service Mesh Interface (SMI)</h2>
           <p class="list-teaser__text">
-            SMI itself is not a service mesh, but a API specification for service mesh features. In was build by Microsoft, Buoyant (developing Linkerd), and HashiCorp (developing Consul) to create a common standard for how service mesh features can be configured different regardless of the underlying service mesh implementation. The result, the Service Mesh Interface specification, means to enable tools based on service mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any service mesh rather than binding to a specific set of implementations. Service mesh users also benefit from the ability to change their service mesh implementation without changing the configuration.
+            SMI itself is not a service mesh, but a API specification for service mesh features. In was built by Microsoft, Buoyant (developing Linkerd), and HashiCorp (developing Consul) to create a common standard for how service mesh features can be configured regardless of the underlying service mesh implementation. This Service Mesh Interface specification allows the implementation-agnostic development of tools based on service mesh features (such as Dashboards, canary releasing automation tools, ...). When developed against the SMI, tools become compatible with any SMI-compliant service mesh. Service mesh users also benefit from the ability to change their service mesh implementation without needing to change configuration.
           </p>
         </a>
       </div>
