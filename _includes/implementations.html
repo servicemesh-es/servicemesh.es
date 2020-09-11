@@ -5,16 +5,18 @@
     <div class="blocks">
         
       <div class="list-teaser list-teaser__body">
-          <a href="https://istio.io" target="_blank" class="link-block">
+          <a href="https://istio.io" target="_blank" class="link-block"> 
+          <div style="height: 100px" class="link-block" > <img src="img/istio.png"/ class="img-center" height="90px"> </div>
           <h2 class="list-teaser__headline">Istio</h2>
           <p class="list-teaser__text">
-            If you have heard about service mesh, you have probably heard about Istio too. Istio is by far the most popular service mesh because it has the most features and it is backed by Google and IBM.
+            If you have heard about service mesh, you have probably heard about Istio too. Istio is by far the most popular service mesh because of it's rich feature set and it Google's and IBM's support.
           </p>
         </a>
         </div>
 
       <div class="list-teaser list-teaser__body">
         <a href="https://linkerd.io" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/linkerd.png"/ class="img-center" height="75px"> </div>
           <h2 class="list-teaser__headline">Linkerd 2</h2>
           <p class="list-teaser__text">
             While Istio made the service mesh popular, Linkerd was the first service mesh and quite successful. Still, the developers decided to build a new version - Linkerd 2 - committed to usability, performance, and Kubernetes as the underlying platform.
@@ -23,27 +25,31 @@
         </div>
 
         <div class="list-teaser list-teaser__body">
-          <a href="http://aws.amazon.com/app-mesh/" target="_blank" class="link-block">
-          <h2 class="list-teaser__headline">AWS App Mesh</h2>
+          <a href="https://www.hashicorp.com/products/consul/service-mesh" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/consul.png"/ class="img-center" height="75px"> </div>
+          <h2 class="list-teaser__headline">Consul/Consul Connect</h2>
           <p class="list-teaser__text">
-            Not long after the service mesh hype, AWS added its own service mesh for applications on AWS.
+            HashiCorp's Consul has been well known as a service discovery solution for a long time. Now that it has adopted the Envoy proxy and Sidecar pattern, Consul can now serve as a service mesh for a variety of platforms like Kubernetes and VMs.
           </p>
         </a>
         </div>
     </div>
 
     <div class="blocks">
+      
       <div class="list-teaser list-teaser__body">
-          <a href="https://www.hashicorp.com/products/consul/service-mesh" target="_blank" class="link-block">
-          <h2 class="list-teaser__headline">Consul/Consul Connect</h2>
-          <p class="list-teaser__text">
-            Consul is well known as a service discovery solution. They decided to implement the service mesh pattern into their architecture to provide even more advanced features.
-          </p>
-        </a>
-        </div>
+        <a href="http://aws.amazon.com/app-mesh/" target="_blank" class="link-block">
+        <div style="height: 100px" class="link-block" > <img src="img/awsappmesh.png"/ class="img-center" height="75px"> </div>
+        <h2 class="list-teaser__headline">AWS App Mesh</h2>
+        <p class="list-teaser__text">
+          Not long after the service mesh hype, AWS added its own service mesh for applications on AWS.
+        </p>
+      </a>
+      </div>
 
         <div class="list-teaser list-teaser__body">
-            <a href="https://mae.sh" target="_blank" class="link-block">
+          <a href="https://mae.sh" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/maesh.svg"/ class="img-center" height="75px" width="100px"> </div>
           <h2 class="list-teaser__headline">Maesh</h2>
           <p class="list-teaser__text">
             As the name already reveals, Maesh is the service mesh based on Traefik, a cloud-native API gateway.
@@ -53,6 +59,7 @@
 
       <div class="list-teaser list-teaser__body">
         <a href="https://kuma.io" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/kuma.png"/ class="img-center" height="75px"> </div>
           <h2 class="list-teaser__headline">Kuma</h2>
           <p class="list-teaser__text">
             Similar to Maesh, Kuma is also a very new service mesh made by developers of an API gateway - Kong.
@@ -61,9 +68,22 @@
       </div>
       <div class="list-teaser list-teaser__body">
         <a href="https://openservicemesh.io/" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/openservicemesh.svg"/ class="img-center" height="90px"> </div>
           <h2 class="list-teaser__headline">Open Service Mesh (OSM)</h2>
           <p class="list-teaser__text">
             A new implementation by Microsoft, following common service mesh design principles like adopting envoy and implementing SMI spec.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="blocks">
+      <div class="list-teaser list-teaser__body">
+        <a href="https://smi-spec.io/" target="_blank" class="link-block">
+          <div style="height: 100px" class="link-block" > <img src="img/smi.png"/ class="img-center" height="75px"> </div>
+          <h2 class="list-teaser__headline">Service Mesh Interface (SMI)</h2>
+          <p class="list-teaser__text">
+            SMI itself is not a service mesh, but a API specification for service mesh features. In was build by Microsoft, Buoyant (developing Linkerd), and HashiCorp (developing Consul) to create a common standard for how service mesh features can be configured different regardless of the underlying service mesh implementation. The result, the Service Mesh Interface specification, means to enable tools based on service mesh Features (such as Flagger for Canary Releasing automation) to be compatible with any service mesh rather than binding to a specific set of implementations. Service mesh users also benefit from the ability to change their service mesh implementation without changing the configuration.
           </p>
         </a>
       </div>
