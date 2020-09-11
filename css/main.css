@@ -46,9 +46,11 @@ book {
 }
 
 .img-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    vertical-align: center;
+    vertical-align: middle;
+    max-height: 25px;
   }
+.helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
