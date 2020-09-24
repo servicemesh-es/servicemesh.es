@@ -8,7 +8,7 @@
         <th class="table-head scope="col">Linkerd 2</th>
         <th class="table-head scope="col">AWS App Mesh</th>
         <th class="table-head scope="col">Consul Connect</th>
-        <th class="table-head scope="col">Maesh</th>
+        <th class="table-head scope="col">Traefik Mesh (formerly Maesh)</th>
         <th class="table-head scope="col">Kuma</th>
         <th class="table-head scope="col">Open Service Mesh (OSM)</th>
       </tr>
@@ -70,7 +70,7 @@
           <td>see <a href="https://github.com/linkerd/linkerd2/blob/master/GOVERNANCE.md" target="_blank">Linkerd Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>AWS</td>
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
-          <td>see <a href="https://github.com/containous/maesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
+          <td>see <a href="https://github.com/traefik/mesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
           <td>see <a href="https://github.com/Kong/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/Kong/kuma/blob/01b55190c928ec3b76fca58a86cd9a0c0ae80de7/GOVERNANCE.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>see <a href="https://cla.opensource.microsoft.com/openservicemesh/osm" target="_blank">Microsoft OpenSource</a></td>
         </tr>
@@ -80,7 +80,7 @@
           <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
           <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
           <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">HashiCorp Learn platform</a></td>
-          <td><a href="https://docs.mae.sh/examples/" target="_blank">Maesh Example</a></td>
+          <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
           <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
           <td><a href="https://github.com/openservicemesh/osm#getting-started" target="_blank">Install OSM on Kubernetes</a></td>
         </tr>
@@ -110,7 +110,7 @@
             <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. Therefore, it requires little time to adopt.</td>
             <td>AWS App Mesh is integrated into the AWS landscape and it is fully managed for you.</td>
             <td>Consul Connect can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
-            <td>Maesh focuses on a selection of features to achieve good usability and performance.</td>
+            <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
             <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
             <td></td>
           </tr>
@@ -120,7 +120,7 @@
             <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
             <td>AWS App Mesh configuration cannot be migrated to an environment outside AWS.</td>
             <td>Consul Connect can only be used in combination with Consul.</td>
-            <td>Maesh currently does not support transparent TLS encryption.</td>
+            <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
             <td>Kuma is still in an early state. That might be a risk for production.</td>
             <td></td>
           </tr>
@@ -231,7 +231,7 @@
         <td>no</td>
         <td>no</td>
         <td><a href="https://github.com/hashicorp/consul-smi-controller" target="_blank">yes</a></td>
-        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
+        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
@@ -241,7 +241,7 @@
         <td>no</td>
         <td>no</td>
         <td>no</td>
-        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
+        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank"></a>yes</a></td>
         <td>no</td>
         <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
@@ -251,7 +251,7 @@
         <td><a href="https://linkerd.io/2/features/traffic-split/" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
-        <td><a href="https://github.com/containous/maesh" target="_blank">yes</a></td>
+        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#traffic-splitting" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
       </tr>
@@ -348,7 +348,7 @@
         <td>yes, <a href="https://linkerd.io/2/tasks/distributed-tracing/" target="_blank">Jaeger</a></td>
         <td><a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-services-appmesh.html" target="_blank">yes, AWS X-Ray</a></td>
         <td><a href="https://github.com/hashicorp/consul-demo-tracing" target="_blank">no</a></td>
-        <td><a href="https://github.com/containous/maesh/pull/79" target="_blank">yes, Jaeger</a></td>
+        <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
         <td><a href="https://kuma.io/docs/0.5.0/policies/traffic-trace/" target="_blank">yes, Jaeger</a></td>
         <td></td>
       </tr>
@@ -402,7 +402,7 @@
         <td><a href="https://github.com/linkerd/linkerd2/issues/2846" target="_blank">no</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/6" target="_blank">no</a></td>
         <td><a href="https://www.consul.io/docs/connect/proxies/envoy.html#limits" target="_blank">yes</a></td>
-        <td><a href="https://docs.mae.sh/configuration/#circuit-breaker" target="_blank">yes</a></td>
+        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
         <td>no*</td>
         <td>no</td>
       </tr>
@@ -412,7 +412,7 @@
         <td><a href="https://linkerd.io/2/features/retries-and-timeouts/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html"target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</td>
-        <td><a href="https://docs.mae.sh/configuration/" target="_blank">yes</a></td>
+        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
         <td>no*</td>
         <td>no</td>
       </tr>
