@@ -111,7 +111,7 @@
             <td>AWS App Mesh is integrated into the AWS landscape and it is fully managed for you.</td>
             <td>Consul Connect can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
             <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
-            <td>Kuma supports both Kubernetes and plain VMs and allows you to customize the Envoy Proxy.</td>
+            <td>Kuma supports both Kubernetes and VMs - including hybrid multi-zone deployments - and allows you to customize the Envoy Proxy.</td>
             <td></td>
           </tr>
           <tr>
@@ -205,7 +205,7 @@
         <td>yes, within AWS</td>
         <td><a href="https://www.consul.io/docs/connect/registration.html" target="_blank">yes</a></td>
         <td>no</td>
-        <td></td>
+        <td><a href="https://kuma.io/docs/latest/documentation/deployments/#multi-zone-mode" target="_blank">yes</a></td>
         <td></td>
       </tr>
       <tr>
@@ -215,7 +215,7 @@
         <td></td>
         <td><a href="https://www.consul.io/docs/connect/mesh_gateway.html" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/0.6.0/policies/mesh/" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/latest/documentation/deployments/" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
     </tbody>
@@ -299,7 +299,7 @@
         <td>no</td>
         <td>no</td>
         <td>yes</td>
-        <td>no</td>
+        <td>yes</td>
         <td>yes</td>
       </tr>
       <tr>
@@ -403,7 +403,7 @@
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/6" target="_blank">no</a></td>
         <td><a href="https://www.consul.io/docs/connect/proxies/envoy.html#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
-        <td>no*</td>
+        <td>yes</td>
         <td>no</td>
       </tr>
       <tr>
@@ -443,7 +443,7 @@
         <td></td>
         <td>no*</td>
         <td>no</td>
-        <td>no*</td>
+        <td><a href="https://kuma.io/docs/latest/policies/fault-injection/" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
     </tbody>
