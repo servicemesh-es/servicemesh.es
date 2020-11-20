@@ -85,16 +85,6 @@
           <td><a href="https://github.com/openservicemesh/osm#getting-started" target="_blank">Install OSM on Kubernetes</a></td>
         </tr>
         <tr>
-          <th scope="row">Automatic Sidecar Injection</th>
-          <td>yes</td>
-          <td>yes</td>
-          <td>yes</td>
-          <td>yes</td>
-          <td>yes (per Node)</td>
-          <td>yes</td>
-          <td>yes</td>
-        </tr>
-        <tr>
             <th scope="row">Used in production</th>
             <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
             <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
@@ -170,6 +160,33 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
+      </tr>
+    </tbody>
+    <thead style="background-color: white; color: #ff4d67">
+      <tr>
+        <th scope="col">Sidecar / Data Plane</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Automatic Sidecar Injection</th>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes (per Node)</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <th scope="row">CNI plugin <small class="form-text">to avoid pod network priviledges</small></th>
+        <td><a href="https://istio.io/latest/docs/setup/additional-setup/cni/" target="_blank">yes</a></td>
+        <td><a href="https://linkerd.io/2/features/cni/" target="_blank">yes</a></td>
+        <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ProxyConfiguration.html" target="_blank">yes</a></td>
+        <td>no</td>
+        <td>no</td>
+        <td><a href="https://kuma.io/docs/1.0.0/documentation/networking/#transparent-proxying" target="_blank">yes</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/issues/1610" target="_blank">no</a></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
