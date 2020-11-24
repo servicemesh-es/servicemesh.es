@@ -4,13 +4,13 @@
     <thead>
       <tr>
         <th class="table-head" scope="col" style="width: 200px;"></th>
-        <th class="table-head scope="col">Istio</th>
-        <th class="table-head scope="col">Linkerd 2</th>
-        <th class="table-head scope="col">AWS App Mesh</th>
-        <th class="table-head scope="col">Consul Connect</th>
-        <th class="table-head scope="col">Traefik Mesh (formerly Maesh)</th>
-        <th class="table-head scope="col">Kuma</th>
-        <th class="table-head scope="col">Open Service Mesh (OSM)</th>
+        <th class="table-head" scope="col">Istio</th>
+        <th class="table-head" scope="col">Linkerd 2</th>
+        <th class="table-head" scope="col">AWS App Mesh</th>
+        <th class="table-head" scope="col">Consul Connect</th>
+        <th class="table-head" scope="col">Traefik Mesh (formerly Maesh)</th>
+        <th class="table-head" scope="col">Kuma</th>
+        <th class="table-head" scope="col">Open Service Mesh (OSM)</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
         <td>1.8</td>
         <td>2.9</td>
         <td></td>
-        <td>1.8</td>
+        <td>1.9</td>
         <td>1.4</td>
         <td>0.7</td>
         <td>0.5</td>
@@ -59,7 +59,7 @@
         <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a></td>
         <td>any</td>
         <td></td>
-        <td><a href="https://www.hashicorp.com/blog/ingress-gateways-in-hashicorp-consul-1-8/" target="_blank">Envoy</a> and <a href="https://www.consul.io/docs/k8s/ambassador" target="_blank">Ambassador in Kubernetes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/gateways/ingress-gateway" target="_blank">Envoy</a> and <a href="https://www.consul.io/docs/k8s/connect/ambassador" target="_blank">Ambassador in Kubernetes</a></td>
         <td>any</td>
         <td>any</td>
         <td>Nginx, Azure Application Gateway Ingress Controller</td>
@@ -79,7 +79,7 @@
           <td><a href="https://istio.io/docs/tasks/" target="_blank">Istio Tasks</a></td>
           <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
           <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
-          <td><a href="https://learn.hashicorp.com/consul/getting-started/connect" target="_blank">HashiCorp Learn platform</a></td>
+          <td><a href="https://learn.hashicorp.com/collections/consul/gs-consul-service-mesh" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
           <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
           <td><a href="https://github.com/openservicemesh/osm#getting-started" target="_blank">Install OSM on Kubernetes</a></td>
@@ -220,7 +220,7 @@
         <td><a href="https://istio.io/latest/docs/setup/install/virtual-machine/" target="_blank">yes</a></td>
         <td>no</td>
         <td>yes, within AWS</td>
-        <td><a href="https://www.consul.io/docs/connect/registration.html" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/registration" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/deployments/#multi-zone-mode" target="_blank">yes</a></td>
         <td></td>
@@ -230,7 +230,7 @@
         <td><a href="https://istio.io/docs/setup/install/multicluster/" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/multicluster/" target="_blank">yes</a></td>
         <td></td>
-        <td><a href="https://www.consul.io/docs/connect/mesh_gateway.html" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/gateways/mesh-gateway" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/deployments/" target="_blank">yes</a></td>
         <td>no</td>
@@ -344,7 +344,7 @@
         <td>yes, <a href="https://www.kiali.io" target="_blank">Kiali</a></td>
         <td><a href="https://linkerd.io/2/features/dashboard/" target="_blank">yes</a></td>
         <td>yes, <a href="http://aws.amazon.com/cloudwatch/" target="_blank">AWS Cloud Watch</a></td>
-        <td>yes, showing configuration and availability only</td>
+        <td><a href="https://www.consul.io/docs/connect/observability/ui-visualization" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, showing configuration only</td>
         <td>no</td>
@@ -381,7 +381,7 @@
         <td><a href="https://istio.io/docs/concepts/traffic-management/#load-balancing-options" target="_blank">yes (Round Robin, Random, Weighted, Least Request)</a></td>
         <td>yes (<a href="https://linkerd.io/2/features/load-balancing/" target="_blank">EWMA</a>, exponentially weighted moving average)</td>
         <td>yes</td>
-        <td>yes</td>
+        <td><a href="https://learn.hashicorp.com/tutorials/consul/load-balancing-envoy" target="_blank">yes (Round Robin, Random, Weighted, Least Request, Consistent Hash)</a></td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -391,7 +391,7 @@
         <td><a href="https://istio.io/docs/tasks/traffic-management/traffic-shifting/#apply-weight-based-routing" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter.html" target="_blank">yes</a></td> 
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td>yes</td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
@@ -401,7 +401,7 @@
         <td><a href="https://istio.io/docs/tasks/traffic-management/request-routing/" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a> </td> 
-        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a></td> 
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router" target="_blank">yes</a></td>
         <td>no</td>
         <td>no*</td>
         <td>Header-based via <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
@@ -418,7 +418,7 @@
         <td><a href="https://istio.io/docs/concepts/traffic-management/#circuit-breakers" target="_blank">yes</a></td>
         <td><a href="https://github.com/linkerd/linkerd2/issues/2846" target="_blank">no</a></td>
         <td><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/aws-app-mesh-introduces-circuit-breaker-capabilities/" target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/connect/proxies/envoy.html#limits" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/proxies/envoy#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/circuit-breaker/" target="_blank">yes</a></td>
         <td>no</td>
@@ -428,7 +428,7 @@
         <td><a href="https://istio.io/docs/concepts/traffic-management/#timeouts" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/retries-and-timeouts/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html"target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router#requesttimeout" target="_blank">yes</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
         <td>no*</td>
         <td>no</td>
@@ -438,7 +438,7 @@
         <td><a href="https://github.com/servicemesh-es/servicemesh.es/issues/35#issue-716462836" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/tasks/configuring-retries/" target="_blank">yes</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router.html" target="_blank">yes</a> </td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router#requesttimeout" target="_blank">yes</a> </td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
@@ -475,7 +475,7 @@
         <td><a href="https://istio.io/docs/concepts/security/#mutual-tls-authentication" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/connect/connect-internals.html#mutual-transport-layer-security-mtls-" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/connect-internals#mutual-transport-layer-security-mtls" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
         <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md" target="_blank"></a>yes</a></td>
@@ -485,7 +485,7 @@
         <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental)</td>
         <td><a href="https://linkerd.io/2/tasks/use_external_certs/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>  
-        <td><a href=https://www.consul.io/docs/connect/ca/consul.html#specifying-a-custom-private-key-and-root-certificate" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
         <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md#using-hashicorp-vault" target="_blank">HashiCorp Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></td>
@@ -495,7 +495,7 @@
         <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a></td>
         <td><a href="https://github.com/linkerd/linkerd2/issues/3342" target="_blank">no</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a></td>
-        <td><a href="https://www.consul.io/docs/connect/intentions.html" target="_blank">yes</a></td>
+        <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
         <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/example/README.md#access-control-policies" target="_blank">yes</a></td>  
