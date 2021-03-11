@@ -17,11 +17,11 @@
       <tr>
         <th scope="row">Current version</th>
         <td>1.9</td>
-        <td>2.9</td>
+        <td>2.10</td>
         <td></td>
         <td>1.9</td>
         <td>1.4</td>
-        <td>1.0</td>
+        <td>1.1</td>
         <td>0.7</td>
       </tr>
       <tr>
@@ -82,7 +82,7 @@
           <td><a href="https://learn.hashicorp.com/collections/consul/gs-consul-service-mesh" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
           <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
-          <td><a href="https://github.com/openservicemesh/osm#getting-started" target="_blank">Install OSM on Kubernetes</a></td>
+          <td><a href="https://github.com/openservicemesh/osm#demos" target="_blank">Install OSM on Kubernetes</a></td>
         </tr>
         <tr>
             <th scope="row">Used in production</th>
@@ -96,7 +96,7 @@
           </tr>
           <tr>
             <th scope="row">Advantages</th>
-            <td>Istio can be adapted and extended like no other Mesh. Its many features are available for Kubernetes and other platforms.</a></td>
+            <td>Istio can be adapted and extended like no other mesh. Its many features are available for Kubernetes and other platforms.</a></td>
             <td>Linkerd 2 is designed to be non-invasive and is optimized for performance and usability. Therefore, it requires little time to adopt.</td>
             <td>AWS App Mesh is integrated into the AWS landscape and it is fully managed for you.</td>
             <td>Consul service mesh can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
@@ -111,8 +111,8 @@
             <td>AWS App Mesh configuration cannot be migrated to an environment outside AWS.</td>
             <td>Consul service mesh can only be used in combination with Consul.</td>
             <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
-            <td>Kuma is possibly the most flexible Service Mesh. Teams should thoroughly consider whether their project can handle the complexity involved.</td>
-            <td>OpenServiceMesh (OSM) is the latest Service Mesh Implementation and simply too young to be production-ready.</td>
+            <td>Kuma is possibly the most flexible service mesh. Teams should thoroughly consider whether their project can handle the complexity involved.</td>
+            <td>OpenServiceMesh (OSM) is the latest service mesh Implementation and simply too young to be production-ready.</td>
           </tr>
       </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -362,7 +362,7 @@
       <tr>
         <th scope="row">Integrated, pre-configured Tracing-Backends</th>
         <td>yes, <a href="https://istio.io/docs/tasks/observability/distributed-tracing/jaeger/" target="_blank">Jaeger</a> or <a href="https://istio.io/docs/tasks/observability/distributed-tracing/zipkin/" target="_blank">Zipkin</a> for nonprod environments</td>
-        <td>yes, <a href="https://linkerd.io/2/tasks/distributed-tracing/" target="_blank">Jaeger</a></td>
+        <td>yes, <a href="https://linkerd.io/2/features/distributed-tracing/" target="_blank">Jaeger</a></td>
         <td><a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-services-appmesh.html" target="_blank">yes, AWS X-Ray</a></td>
         <td><a href="https://github.com/hashicorp/consul-demo-tracing" target="_blank">no</a></td>
         <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
@@ -389,7 +389,7 @@
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/traffic-shifting/#apply-weight-based-routing" target="_blank">yes</a></td>
-        <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td> 
+        <td><a href="https://linkerd.io/2/features/traffic-split/" target="_blank">yes</a>, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-splitter" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
@@ -430,7 +430,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html"target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router#requesttimeout" target="_blank">yes</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
-        <td><a href="https://kuma.io/docs/latest/policies/retry/#retry" target="_blank">yes</a></td>
+        <td>yes, <a href="https://kuma.io/docs/latest/policies/retry/" target="_blank">retry</a> and <a href="https://kuma.io/docs/1.1.0/policies/timeout" target="_blank">timeout</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -438,7 +438,7 @@
         <td><a href="https://github.com/servicemesh-es/servicemesh.es/issues/35#issue-716462836" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/tasks/configuring-retries/" target="_blank">yes</a></td> 
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
-        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router#requesttimeout" target="_blank">yes</a> </td>
+        <td><a href="https://www.consul.io/docs/agent/config-entries/service-router#requesttimeout" target="_blank">yes</a></td>
         <td>no</td>
         <td>no</td>
         <td>no</td>
@@ -474,21 +474,31 @@
         <th scope="row">mTLS</th>
         <td><a href="https://istio.io/docs/concepts/security/#mutual-tls-authentication" target="_blank">yes</a></td>
         <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a></td>
-        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/connect-internals#mutual-transport-layer-security-mtls" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md" target="_blank"></a>yes</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/content/docs/tasks_usage/certificates.md" target="_blank"></a>yes</a></td>
+      </tr>
+      <tr>
+        <th scope="row">mTLS Enforcement</th>
+        <td><a href="https://istio.io/latest/docs/tasks/security/authentication/mtls-migration/" target="_blank">yes</a></td>
+        <td>no</td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a>, via client policies</td>
+        <td><a href="https://www.consul.io/docs/agent/options#verify_incoming" target="_blank">yes</a></td>
+        <td>no</td>
+        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
         <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental)</td>
         <td><a href="https://linkerd.io/2/tasks/use_external_certs/" target="_blank">yes</a></td>
-        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html" target="_blank">yes</a></td>  
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>  
         <td><a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/patterns/certificates.md#using-hashicorp-vault" target="_blank">HashiCorp Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a> and <a href="https://azure.microsoft.com/en-us/services/key-vault/" target="_blank">Azure Key Vault</a></td>
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/content/docs/tasks_usage/certificates.md#using-hashicorp-vault" target="_blank">HashiCorp Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a> and <a href="https://azure.microsoft.com/en-us/services/key-vault/" target="_blank">Azure Key Vault</a></td>
       </tr>
       <tr>
         <th scope="row">Authorization Rules</th>
@@ -498,7 +508,7 @@
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/example/README.md#access-control-policies" target="_blank">yes</a></td>  
+        <td><a href="https://github.com/openservicemesh/osm/blob/main/docs/content/docs/install/manual_demo/_index.md#traffic-policy-modes" target="_blank">yes</a></td>  
       </tr>
     </tbody>
     <tfoot>
