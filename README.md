@@ -1,4 +1,4 @@
-![Service Mesh Comparison](img/mstile-150x150.png)
+![Service Mesh Comparison](img/servicemeshes.png)
 
 # servicemesh.es | Service Mesh Comparison
 
