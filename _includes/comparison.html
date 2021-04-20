@@ -5,7 +5,7 @@
       <tr>
         <th class="table-head" scope="col" style="width: 200px;"></th>
         <th class="table-head" scope="col">Istio</th>
-        <th class="table-head" scope="col">Linkerd 2</th>
+        <th class="table-head" scope="col">Linkerd</th>
         <th class="table-head" scope="col">AWS App Mesh</th>
         <th class="table-head" scope="col">Consul</th>
         <th class="table-head" scope="col">Traefik Mesh (formerly Maesh)</th>
@@ -37,7 +37,7 @@
       <tr>
         <th scope="row">Developed by</th>
         <td>Google, IBM, Lyft</td>
-        <td>Buoyant</td>
+        <td>Buoyant, and the open source Linkerd community</td>
         <td>AWS</td>
         <td>HashiCorp</td>
         <td>Containous</td>
@@ -47,7 +47,7 @@
       <tr>
         <th scope="row">Service Proxy</th>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
-        <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">linkerd-proxy</a></td>
+        <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">Linkerd2-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
         <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
@@ -77,7 +77,7 @@
       <tr>
           <th scope="row">Tutorial</th>
           <td><a href="https://istio.io/docs/tasks/" target="_blank">Istio Tasks</a></td>
-          <td><a href="https://linkerd.io/2/tasks/books/" target="_blank">Linkerd Tasks</a></td>
+          <td><a href="https://linkerd.io/2/getting-started/" target="_blank">Linkerd Getting Started Guide</a></td>
           <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
           <td><a href="https://learn.hashicorp.com/collections/consul/gs-consul-service-mesh" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
@@ -107,7 +107,7 @@
           <tr>
             <th scope="row">Drawbacks</th>
             <td>Istio's flexibility can be overwhelming for teams who don't have the capacity for more complex technology. Also, Istio takes control of the ingress controller.</td>
-            <td>Linkerd 2 is deeply integrated with Kubernetes and cannot be expanded. Since Linkerd 2 does not rely on a third-party proxy, it cannot be extended easily.</td>
+            <td>Linkerd 2 is deeply integrated with Kubernetes and does not currently support non-Kubernetes workloads.</td>
             <td>AWS App Mesh configuration cannot be migrated to an environment outside AWS.</td>
             <td>Consul service mesh can only be used in combination with Consul.</td>
             <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
@@ -292,7 +292,7 @@
       <tr>
         <th scope="row">Access Log Generation	</th>
         <td><a href="https://istio.io/docs/tasks/observability/logs/collecting-logs/" target="_blank">yes</a></td>
-        <td>no (<a href="https://linkerd.io/2/reference/cli/tap/" target="_blank">tap-Feature</a> instead)</td>
+        <td>no (<a href="https://linkerd.io/2/reference/cli/tap/" target="_blank">tap feature</a> instead)</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -312,7 +312,7 @@
       <tr>
         <th scope="row">Integrated, pre-configured Prometheus	</th>
         <td>yes</td>
-        <td>yes, option to use own installation</td>
+        <td>yes, [in an extension](https://linkerd.io/2.10/tasks/extensions/)</td>
         <td>no</td>
         <td>no</td>
         <td>yes</td>
@@ -322,7 +322,7 @@
       <tr>
         <th scope="row">Integrated, pre-configured Grafana</th>
         <td>yes</td>
-        <td>yes</td>
+        <td>yes, [in an extension](https://linkerd.io/2.10/tasks/extensions/)</td>
         <td>no</td>
         <td>no</td>
         <td>yes</td>
@@ -362,7 +362,7 @@
       <tr>
         <th scope="row">Integrated, pre-configured Tracing-Backends</th>
         <td>yes, <a href="https://istio.io/docs/tasks/observability/distributed-tracing/jaeger/" target="_blank">Jaeger</a> or <a href="https://istio.io/docs/tasks/observability/distributed-tracing/zipkin/" target="_blank">Zipkin</a> for nonprod environments</td>
-        <td>yes, <a href="https://linkerd.io/2/features/distributed-tracing/" target="_blank">Jaeger</a></td>
+        <td><a href="https://linkerd.io/2/features/distributed-tracing/" target="_blank">Jaeger</a>, in an extension</td>
         <td><a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-services-appmesh.html" target="_blank">yes, AWS X-Ray</a></td>
         <td><a href="https://github.com/hashicorp/consul-demo-tracing" target="_blank">no</a></td>
         <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
@@ -473,7 +473,7 @@
       <tr>
         <th scope="row">mTLS</th>
         <td><a href="https://istio.io/docs/concepts/security/#mutual-tls-authentication" target="_blank">yes</a></td>
-        <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a></td>
+        <td><a href="https://linkerd.io/2/features/automatic-mtls" target="_blank">yes</a>, on by default</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/connect-internals#mutual-transport-layer-security-mtls" target="_blank">yes</a></td>
         <td>no</td>
