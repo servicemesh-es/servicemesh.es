@@ -16,13 +16,13 @@
     <tbody>
       <tr>
         <th scope="row">Current version</th>
-        <td>1.9</td>
+        <td>1.11</td>
         <td>2.10</td>
         <td></td>
         <td>1.10</td>
         <td>1.4</td>
-        <td>1.2.3</td>
-        <td>0.8</td>
+        <td>1.3</td>
+        <td>0.9</td>
       </tr>
       <tr>
         <th scope="row">License</th>
@@ -40,7 +40,7 @@
         <td>Buoyant</td>
         <td>AWS</td>
         <td>HashiCorp</td>
-        <td>Containous</td>
+        <td>Traefik Labs</td>
         <td>Kong</td>
         <td>Microsoft</td>
       </tr>
@@ -50,7 +50,7 @@
         <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">Linkerd2-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
-        <td><a href="https://traefik.io" target="_blank">Traefik</a></td>
+        <td><a href="https://traefik.io/traefik/" target="_blank">Traefik Proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
       </tr>
@@ -180,7 +180,7 @@
       </tr>
       <tr>
         <th scope="row">CNI plugin <small class="form-text">to avoid pod network priviledges</small></th>
-        <td><a href="https://istio.io/latest/docs/setup/additional-setup/cni/" target="_blank">yes</a></td>
+        <td><a href="https://istio.io/latest/docs/setup/additional-setup/cni/" target="_blank">yes</a>, in beta</td>
         <td><a href="https://linkerd.io/2/features/cni/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ProxyConfiguration.html" target="_blank">yes</a></td>
         <td>no</td>
@@ -200,9 +200,9 @@
         <td>Kubernetes</td>
         <td>Kubernetes</td>
         <td>ECS, Fargate, EKS, EC2</td>
-        <td>ECS (tech preview), Kubernetes, Nomad, VMs (Universal)</td>
+        <td>ECS (tech preview), Kubernetes, Nomad, VMs</td>
         <td>Kubernetes</td>
-        <td>Kubernetes, VMs (Universal)</td>
+        <td>Kubernetes, VMs</td>
         <td>Kubernetes</td>
       </tr>
       <tr>
@@ -223,7 +223,7 @@
         <td><a href="https://www.consul.io/docs/k8s/installation/multi-cluster/vms-and-kubernetes" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/deployments/#multi-zone-mode" target="_blank">yes</a></td>
-        <td></td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Multi-Cluster Mesh<small class="form-text">Control and observe multiple clusters</small></th>
@@ -290,14 +290,24 @@
     </thead>
     <tbody>
       <tr>
+        <th scope="row">Service Log Collection</th>
+        <td>no</td>
+        <td>no</td>
+        <td>no, use <a href="https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-firelens-log-router-for-amazon-ecs-and-aws-fargate">AWS FireLens</a> for ECS and Fargate instead</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no</td>
+        <td><a href="https://docs.openservicemesh.io/docs/guides/observability/logs"/>yes</a>, using <a href="https://fluentbit.io/">Fluent Bit</a></td>
+      </tr>
+      <tr>
         <th scope="row">Access Log Generation	</th>
         <td><a href="https://istio.io/docs/tasks/observability/logs/collecting-logs/" target="_blank">yes</a></td>
         <td>no (<a href="https://linkerd.io/2/reference/cli/tap/" target="_blank">tap feature</a> instead)</td>
-        <td>yes</td>
+        <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy-logs.html">yes</a></a></td>
         <td>yes</td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-log/#traffic-log" target="_blank">yes</a></td>
-        <td></td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row"><a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals" target="_blank">"Golden Signal”</a> Metrics Generation</th>
@@ -335,9 +345,9 @@
         <td><a href="https://linkerd.io/2/tasks/getting-per-route-metrics/" target="_blank">yes</a></td>
         <td></td>
         <td>depending on the proxy used</td>
-        <td></td>
         <td>no</td>
-        <td></td>
+        <td>no</td>
+        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Dashboard</th>
@@ -346,7 +356,7 @@
         <td>yes, <a href="http://aws.amazon.com/cloudwatch/" target="_blank">AWS Cloud Watch</a></td>
         <td><a href="https://www.consul.io/docs/connect/observability/ui-visualization" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, with configuration and reports</td>
+        <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, with a service topology map in grafana</td>
         <td>no</td>
       </tr>
       <tr>
