@@ -409,7 +409,7 @@
       <tr>
         <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/request-routing/" target="_blank">yes</a></td>
-        <td>no</td>
+        <td>planned</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a> </td> 
         <td><a href="https://www.consul.io/docs/agent/config-entries/service-router" target="_blank">yes</a></td>
         <td>no</td>
@@ -426,7 +426,7 @@
       <tr>
         <th scope="row">Circuit Breaking</th>
         <td><a href="https://istio.io/docs/concepts/traffic-management/#circuit-breakers" target="_blank">yes</a></td>
-        <td><a href="https://github.com/linkerd/linkerd2/issues/2846" target="_blank">no</a></td>
+        <td><a href="https://github.com/linkerd/linkerd2/issues/2846" target="_blank">no, planned for 2.12.0</a></td>
         <td><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/aws-app-mesh-introduces-circuit-breaker-capabilities/" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-defaults#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
@@ -493,7 +493,7 @@
       <tr>
         <th scope="row">mTLS Enforcement</th>
         <td><a href="https://istio.io/latest/docs/tasks/security/authentication/mtls-migration/" target="_blank">yes</a></td>
-        <td>no</td>
+        <td>yes, 2.11</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a>, via client policies</td>
         <td>yes</td>
         <td>no</td>
@@ -533,7 +533,7 @@
       <tr>
         <th scope="row">Service-to-Service Authorization Rules</th>
         <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a></td>
-        <td><a href="https://github.com/linkerd/linkerd2/issues/3342" target="_blank">no</a></td>
+        <td><a href="https://github.com/linkerd/linkerd2/issues/3342" target="_blank">yes, 2.11.0</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a>, but <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/security_iam_service-with-iam.html" target="_blank">support for IAM for user-authorization</a></td>
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
