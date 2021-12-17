@@ -16,13 +16,13 @@
     <tbody>
       <tr>
         <th scope="row">Current version</th>
-        <td>1.11</td>
-        <td>2.10</td>
+        <td>1.12</td>
+        <td>2.11</td>
         <td></td>
-        <td>1.10</td>
+        <td>1.11</td>
         <td>1.4</td>
-        <td>1.3</td>
-        <td>0.9</td>
+        <td>1.4</td>
+        <td>0.11</td>
       </tr>
       <tr>
         <th scope="row">License</th>
@@ -46,7 +46,7 @@
       </tr>
       <tr>
         <th scope="row">Service Proxy</th>
-        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, <a href="https://istio.io/latest/blog/2021/proxyless-grpc/proxyless" target="_blank">for gRPC (experimental)</a></td>
         <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">Linkerd2-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
@@ -56,13 +56,13 @@
       </tr>
       <tr>
         <th scope="row">Ingress Controller</th>
-        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a></td>
+        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a>, support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a></td>
         <td>any</td>
         <td></td>
         <td><a href="https://www.consul.io/docs/connect/gateways/ingress-gateway" target="_blank">Envoy</a> and <a href="https://www.consul.io/docs/k8s/connect/ambassador" target="_blank">Ambassador in Kubernetes</a></td>
         <td>any</td>
         <td>any</td>
-        <td>Nginx, Azure Application Gateway Ingress Controller</td>
+        <td><a href="https://release-v0-11.docs.openservicemesh.io/docs/guides/traffic_management/ingress/" target="_blank">prepared config for Contour</a>, compatible with any other</td>
       </tr>
       <tr>
           <th scope="row">Governance</th>
@@ -233,7 +233,7 @@
         <td><a href="https://www.consul.io/docs/k8s/installation/multi-cluster" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/deployments/" target="_blank">yes</a></td>
-        <td>no</td>
+        <td><a href="https://github.com/openservicemesh/osm/issues/3456" target="_blank">planned</a>></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -362,7 +362,7 @@
       <tr>
         <th scope="row">Compatible Tracing-Backends</th>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="http://www.solarwinds.com" target="_blank">Solarwinds</a></td>
-        <td>all Backends supporting <a href="https://opencensus.io/service/exporters" target="_blank">OpenCensus</a></td>
+        <td>all Backends supporting <a href="https://opentelemetry.io/" target="_blank">OpenTelemetry</a></td>
         <td><a href="http://aws.amazon.com/xray/" target="_blank">AWS X-Ray</a></td>
         <td><a href="https://www.datadoghq.com" target="_blank">Datadog</a>, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
@@ -493,12 +493,12 @@
       <tr>
         <th scope="row">mTLS Enforcement</th>
         <td><a href="https://istio.io/latest/docs/tasks/security/authentication/mtls-migration/" target="_blank">yes</a></td>
-        <td>yes, 2.11</td>
+        <td>yes</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a>, via client policies</td>
         <td>yes</td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
-        <td></td>
+        <td>yes, via <a href="https://linkerd.io/2.11/features/server-policy/" target="_blank">https://linkerd.io/2.11/features/server-policy/</a></td>
       </tr>
       <tr>
         <th scope="row">mTLS Permissive Mode</th>
@@ -508,7 +508,7 @@
         <td>yes</td>
         <td>no</td>
         <td>yes</td>
-        <td>no</td>
+        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">mTLS by default</th>
@@ -533,7 +533,7 @@
       <tr>
         <th scope="row">Service-to-Service Authorization Rules</th>
         <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a></td>
-        <td><a href="https://github.com/linkerd/linkerd2/issues/3342" target="_blank">yes, 2.11.0</a></td>
+        <td><a href="https://linkerd.io/2.11/features/server-policy/" target="_blank">yes</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a>, but <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/security_iam_service-with-iam.html" target="_blank">support for IAM for user-authorization</a></td>
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
