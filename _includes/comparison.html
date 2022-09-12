@@ -24,7 +24,7 @@
         <td>1.4</td>
         <td>1.7</td>
         <td>1.0</td>
-        <td>1.2</td>
+        <td>1.12</td>
       </tr>
       <tr>
         <th scope="row">License</th>
@@ -57,7 +57,7 @@
         <td><a href="https://traefik.io/traefik/" target="_blank">Traefik Proxy</a> on each node</td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
-        <td>Cilium agent on each node, <a href="https://docs.cilium.io/en/stable/concepts/security/proxy/" target="_blank">Proxy Injection</a> option for L7 (<a href="https://www.envoyproxy.io" target="_blank">Envoy</a>)</td>
+        <td>Cilium agent on each node, <a href="https://docs.cilium.io/en/v1.12/policy/visibility/#proxy-visibility" target="_blank">Proxy Injection</a> option for L7 (<a href="https://www.envoyproxy.io" target="_blank">Envoy</a>)</td>
       </tr>
       <tr>
         <th scope="row">Ingress Controller</th>
@@ -68,7 +68,7 @@
         <td>any</td>
         <td>any</td>
         <td><a href="https://release-v0-11.docs.openservicemesh.io/docs/guides/traffic_management/ingress/" target="_blank">prepared config for Contour</a>, compatible with any other</td>
-        <td>any</td>
+        <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/ingress/" target="_blank">Cilium Ingress for TLS & path-based routing features</a>, compatible with any other</td>
       </tr>
       <tr>
           <th scope="row">Governance</th>
@@ -101,7 +101,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td><a href="https://github.com/cilium/cilium/blob/master/USERS.md" target="_blank">yes</a></td>
           </tr>
           <tr>
             <th scope="row">Advantages</th>
@@ -112,7 +112,7 @@
             <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
             <td>Kuma supports both Kubernetes and VMs - including hybrid multi-zone deployments - and scales to many autonomous zones with different network constraints, it also allows you to customize the Envoy Proxy.</td>
             <td>OpenServiceMesh is driven by Microsoft and therefore expected to be well integrated with Azure. It also supports the SMI API.</td>
-            <td>Cilium takes a different approach on service mesh by making use of eBPF and therefore it doesn't need sidecars at all, which saves complexity and cost </td>
+            <td>Cilium takes a different approach on service mesh by making use of eBPF and therefore it doesn't need sidecars at all, which saves complexity and cost.</td>
           </tr>
           <tr>
             <th scope="row">Drawbacks</th>
@@ -123,7 +123,7 @@
             <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
             <td>Kuma is possibly the most flexible service mesh. Teams should thoroughly consider whether their project can handle the complexity involved.</td>
             <td>OpenServiceMesh (OSM) is the latest service mesh Implementation and simply too young to be production-ready.</td>
-            <td>The different architecture of Cilium limits it's capabilities compared to ther products like TODO.</td>
+            <td>To enable the same feature set as Service Meshes with sidecars, a lot of maunal configuration is used.</td>
           </tr>
       </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -243,7 +243,7 @@
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
         <td>no</td>
-        <td>no</td>
+        <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/external-workloads/#external-workloads" target="_blank">yes</a></td>
       </tr>
       <tr>
         <th scope="row">Multi-Cluster Mesh<small class="form-text">Control and observe multiple clusters</small></th>
@@ -334,7 +334,7 @@
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-log/#traffic-log" target="_blank">yes</a></td>
         <td>no</td>
-        <td>yes, via <a href="https://docs.cilium.io/en/stable/concepts/security/proxy/">Proxy injection</a></td>
+        <td>yes, via <a href="https://docs.cilium.io/en/v1.12/policy/visibility/#proxy-visibility">Proxy injection</a></td>
       </tr>
       <tr>
         <th scope="row"><a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals" target="_blank">"Golden Signal”</a> Metrics Generation</th>
@@ -400,7 +400,7 @@
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io/" target="_blank">zipkin</a>, <a href="https://kuma.io/docs/latest/policies/traffic-trace/#add-datadog-backend">datadog</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
-        <td></td>
+        <td><a href="https://github.com/cilium/hubble-otel" target="_blank">OpenTelemetry via hubble-otel</a></td>
       </tr>
       <tr>
         <th scope="row">Integrated, pre-configured Tracing-Backends</th>
@@ -411,7 +411,7 @@
         <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-trace/" target="_blank">yes, Jaeger</a></td>
         <td><a href="https://docs.openservicemesh.io/docs/tasks_usage/observability/tracing/#automatically-provision-jaeger">yes (install with flag), Jaeger</a></td>
-        <td></td>
+        <td>no</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -440,7 +440,7 @@
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-route" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
-        <td>no</td>
+        <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
         <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
@@ -451,7 +451,7 @@
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-route/#l7-traffic-split" target="_blank">yes</a></td>
         <td>Header-based via <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
-        <td>no</td>
+        <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -469,7 +469,7 @@
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/circuit-breaker/" target="_blank">yes</a></td>
         <td><a href="https://github.com/openservicemesh/osm/issues/980">yes</a></td>
-        <td>no</td>
+        <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
         <th scope="row">Retry & Timeout</th>
@@ -480,7 +480,7 @@
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
         <td>yes, <a href="https://kuma.io/docs/latest/policies/retry/" target="_blank">retry</a> and <a href="https://kuma.io/docs/1.1.0/policies/timeout" target="_blank">timeout</a></td>
         <td>no</td>
-        <td>no</td>
+        <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
         <th scope="row">Path- & Method-based Retry & Timeout<small class="form-text">Different retry and timeout config for each endpoint</small></th>
