@@ -95,7 +95,7 @@
         <tr>
             <th scope="row">Used in production</th>
             <td><a href="https://istio.io/about/community/customers/" target="_blank">yes</a></td>
-            <td><a href="https://github.com/linkerd/linkerd2/blob/master/ADOPTERS.md" target="_blank">yes</a></td>
+            <td><a href="https://linkerd.io/community/adopters/" target="_blank">yes</a></td>
             <td><a href="https://aws.amazon.com/de/app-mesh/customers/" target="_blank">yes</a></td>
             <td><a href="https://www.hashicorp.com/resources?type=case-study&products=consul" target="_blank">yes</a></td>
             <td></td>
@@ -106,7 +106,7 @@
           <tr>
             <th scope="row">Advantages</th>
             <td>Istio can be adapted and extended like no other mesh. Its many features are available for Kubernetes and other platforms.</a></td>
-            <td>Linkerd is designed to be non-invasive and is optimized for performance and usability. Therefore, it requires little time to adopt.</td>
+            <td>Linkerd is the only CNCF Graduated service mesh. It provides best-in-class operational simplicity, security, and performance, and is extremely easy to adopt and use.</td>
             <td>AWS App Mesh is integrated into the AWS landscape and it is fully managed for you.</td>
             <td>Consul service mesh can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
             <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
@@ -226,7 +226,7 @@
       <tr>
         <th scope="row">Cloud Integrations</th>
         <td><a href="https://cloud.google.com/istio" target="_blank">Google Cloud</a>, <a href="https://www.alibabacloud.com/help/doc-detail/89805.htm" target="_blank">Alibaba Cloud</a>, <a href="https://cloud.ibm.com/docs/containers?topic=containers-istio" target="_blank">IBM Cloud</a></td>
-        <td><a href="https://marketplace.digitalocean.com/apps/linkerd" target="_blank">DigitalOcean</a></td>
+        <td><a href="https://marketplace.digitalocean.com/apps/linkerd-beta" target="_blank">DigitalOcean</a></td>
         <td><a href="https://aws.amazon.com/app-mesh/" target="_blank">AWS</a></td>
         <td><a href="https://cloud.hashicorp.com/products/consul" target="_blank">HCP Consul on AWS and Azure</a></td>
         <td></td>
@@ -434,7 +434,7 @@
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/traffic-shifting/#apply-weight-based-routing" target="_blank">yes</a></td>
-        <td><a href="https://linkerd.io/2/features/traffic-split/" target="_blank">yes</a>, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
+        <td><a href="https://linkerd.io/2.13/tasks/configuring-dynamic-request-routing/" target="_blank">yes</a>, through <a href="https://gateway-api.sigs.k8s.io/guides/http-routing/" _target="blank">Gateway API</a> or <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-splitter" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
@@ -445,7 +445,7 @@
       <tr>
         <th scope="row">Header- and Path-based Traffic Splits<small class="form-text">Routing rules based on request header and path</small></th>
         <td><a href="https://istio.io/docs/tasks/traffic-management/request-routing/" target="_blank">yes</a></td>
-        <td>planned</td>
+        <td><a href="https://linkerd.io/2.13/tasks/configuring-dynamic-request-routing/" target="_blank">yes</a>, through <a href="https://gateway-api.sigs.k8s.io/guides/http-routing/" _target="blank">Gateway API</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a> </td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router" target="_blank">yes</a></td>
         <td>no</td>
@@ -463,7 +463,7 @@
       <tr>
         <th scope="row">Circuit Breaking</th>
         <td><a href="https://istio.io/docs/concepts/traffic-management/#circuit-breakers" target="_blank">yes</a></td>
-        <td><a href="https://github.com/linkerd/linkerd2/issues/2846" target="_blank">no, planned for 2.12.0</a></td>
+        <td><a href="https://linkerd.io/2.13/tasks/circuit-breakers/" target="_blank">yes</a></td>
         <td><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/aws-app-mesh-introduces-circuit-breaker-capabilities/" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-defaults#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
@@ -580,7 +580,7 @@
       <tr>
         <th scope="row">Service-to-Service Authorization Rules</th>
         <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a></td>
-        <td><a href="https://linkerd.io/2.11/features/server-policy/" target="_blank">yes</a></td>
+        <td><a href="https://linkerd.io/2/features/server-policy/" target="_blank">yes</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a>, but <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/security_iam_service-with-iam.html" target="_blank">support for IAM for user-authorization</a></td>
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
