@@ -17,7 +17,7 @@
     <tbody>
       <tr>
         <th scope="row">Current version</th>
-        <td>1.13</td>
+        <td>1.18</td>
         <td>2.13</td>
         <td></td>
         <td>1.15</td>
@@ -568,7 +568,7 @@
       </tr>
       <tr>
         <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
-        <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental)</td>
+        <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental), <a href="https://istio.io/latest/docs/ops/integrations/spire/" target="_blank">SPIRE Integration</a></td>
         <td><a href="https://linkerd.io/2/tasks/use_external_certs/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td>yes, <a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
@@ -579,7 +579,7 @@
       </tr>
       <tr>
         <th scope="row">Service-to-Service Authorization Rules</th>
-        <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a></td>
+        <td><a href="https://istio.io/docs/concepts/security/#authorization" target="_blank">yes</a>, including <a href="https://istio.io/latest/docs/tasks/security/authorization/authz-custom/" target="_blank">External Authorization</a></td>
         <td><a href="https://linkerd.io/2.11/features/server-policy/" target="_blank">yes</a></td>
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a>, but <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/security_iam_service-with-iam.html" target="_blank">support for IAM for user-authorization</a></td>
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
