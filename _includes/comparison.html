@@ -17,10 +17,10 @@
     <tbody>
       <tr>
         <th scope="row">Current version</th>
-        <td>1.13</td>
-        <td>2.11</td>
+        <td>1.18</td>
+        <td>2.13</td>
         <td></td>
-        <td>1.15</td>
+        <td>1.16</td>
         <td>1.4</td>
         <td>2.0</td>
         <td>1.0</td>
@@ -328,9 +328,9 @@
       <tr>
         <th scope="row">Access Log Generation	</th>
         <td><a href="https://istio.io/docs/tasks/observability/logs/collecting-logs/" target="_blank">yes</a></td>
-        <td>no (<a href="https://linkerd.io/2/reference/cli/tap/" target="_blank">tap feature</a> instead)</td>
+        <td><a href="https://linkerd.io/2/features/access-logging/" target="_blank">yes</a> and <a href="https://linkerd.io/2/reference/cli/tap/" target="_blank">tap feature</a> </td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy-logs.html">yes</a></a></td>
-        <td>><a href="https://developer.hashicorp.com/consul/docs/connect/observability/access-logs" target="_blank">yes</a></td>
+        <td><a href="https://developer.hashicorp.com/consul/docs/connect/observability/access-logs" target="_blank">yes</a></td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-log/#traffic-log" target="_blank">yes</a></td>
         <td>no</td>
@@ -549,7 +549,7 @@
         <td>yes</td>
         <td>yes</td>
         <td></td>
-        <td>no</td>
+        <td><a href="https://developer.hashicorp.com/consul/docs/k8s/connect/onboarding-tproxy-mode">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#permissive-mtls">yes</a></td>
         <td>yes</td>
@@ -568,7 +568,7 @@
       </tr>
       <tr>
         <th scope="row">External CA certificate and key pluggable <small class="form-text">e.g. <a href="https://www.vaultproject.io" target="_blank">Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a></small></th>
-        <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental)</td>
+        <td>yes, <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/" target="_blank">CA cert pluggable</a> and <a href="https://istio.io/latest/docs/tasks/security/cert-management/custom-ca-k8s/" target="_blank">CA integration</a> (experimental), <a href="https://istio.io/latest/docs/ops/integrations/spire/" target="_blank">SPIRE Integration</a></td>
         <td><a href="https://linkerd.io/2/tasks/use_external_certs/" target="_blank">yes</a></td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td>yes, <a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
