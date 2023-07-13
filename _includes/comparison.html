@@ -10,7 +10,6 @@
         <th class="table-head" scope="col">Consul</th>
         <th class="table-head" scope="col">Traefik Mesh (formerly Maesh)</th>
         <th class="table-head" scope="col">Kuma</th>
-        <th class="table-head" scope="col">Open Service Mesh (OSM)</th>
         <th class="table-head" scope="col">Cilium</th>
       </tr>
     </thead>
@@ -23,7 +22,6 @@
         <td>1.16</td>
         <td>1.4</td>
         <td>2.0</td>
-        <td>1.0</td>
         <td>1.12</td>
       </tr>
       <tr>
@@ -32,7 +30,6 @@
         <td>Apache License 2.0</td>
         <td>Closed Source</td>
         <td>Mozilla License</td>
-        <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
@@ -45,7 +42,6 @@
         <td>HashiCorp</td>
         <td>Traefik Labs</td>
         <td>Kong</td>
-        <td>Microsoft</td>
         <td>Cilium</td>
       </tr>
       <tr>
@@ -55,7 +51,6 @@
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
         <td><a href="https://traefik.io/traefik/" target="_blank">Traefik Proxy</a> on each node</td>
-        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>Cilium agent on each node, <a href="https://docs.cilium.io/en/v1.12/policy/visibility/#proxy-visibility" target="_blank">Proxy Injection</a> option for L7 (<a href="https://www.envoyproxy.io" target="_blank">Envoy</a>)</td>
       </tr>
@@ -67,18 +62,16 @@
         <td><a href="https://www.consul.io/docs/connect/gateways#ingress-gateways" target="_blank">Envoy</a>. Support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a> with Consul API Gateway</td>
         <td>any</td>
         <td>any</td>
-        <td><a href="https://release-v0-11.docs.openservicemesh.io/docs/guides/traffic_management/ingress/" target="_blank">prepared config for Contour</a>, compatible with any other</td>
         <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/ingress/" target="_blank">Cilium Ingress for TLS & path-based routing features</a>, compatible with any other</td>
       </tr>
       <tr>
           <th scope="row">Governance</th>
-          <td>see <a href="https://github.com/istio/community#istio-community" target="_blank">Istio Community</a> and <a href="https://openusage.org/" target="_blank">Open Usage Commons</a></td>
+          <td>see <a href="https://github.com/istio/community#istio-community" target="_blank">Istio Community</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>see <a href="https://github.com/linkerd/linkerd2/blob/master/GOVERNANCE.md" target="_blank">Linkerd Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>AWS</td>
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
           <td>see <a href="https://github.com/traefik/mesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
           <td>see <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
-          <td>see <a href="https://github.com/openservicemesh/osm/blob/main/CONTRIBUTING.md" target="_blank">Contributing notice</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>see <a href="https://docs.cilium.io/en/latest/community/governance/" target="_blank">Governance</a></td>
         </tr>
       <tr>
@@ -89,7 +82,6 @@
           <td><a href="https://learn.hashicorp.com/collections/consul/gs-consul-service-mesh" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
           <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
-          <td><a href="https://docs.openservicemesh.io/docs/install/manual_demo/" target="_blank">Install OSM on Kubernetes</a></td>
           <td><a href="https://docs.cilium.io/en/latest/gettingstarted/k8s-install-default/" target="_blank">Cilium Quick Installation</a></td>
         </tr>
         <tr>
@@ -98,7 +90,6 @@
             <td><a href="https://linkerd.io/community/adopters/" target="_blank">yes</a></td>
             <td><a href="https://aws.amazon.com/de/app-mesh/customers/" target="_blank">yes</a></td>
             <td><a href="https://www.hashicorp.com/resources?type=case-study&products=consul" target="_blank">yes</a></td>
-            <td></td>
             <td></td>
             <td></td>
             <td><a href="https://github.com/cilium/cilium/blob/master/USERS.md" target="_blank">yes</a></td>
@@ -111,7 +102,6 @@
             <td>Consul service mesh can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
             <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
             <td>Kuma supports both Kubernetes and VMs - including hybrid multi-zone deployments - and scales to many autonomous zones with different network constraints, it also allows you to customize the Envoy Proxy.</td>
-            <td>OpenServiceMesh is driven by Microsoft and therefore expected to be well integrated with Azure. It also supports the SMI API.</td>
             <td>Cilium takes a different approach on service mesh by making use of eBPF and therefore it doesn't need sidecars at all, which saves complexity and cost.</td>
           </tr>
           <tr>
@@ -122,7 +112,6 @@
             <td>Consul uses its own internal storage, and does not on rely Kubernetes for persistent storage.</td>
             <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
             <td>Kuma is possibly the most flexible service mesh. Teams should thoroughly consider whether their project can handle the complexity involved.</td>
-            <td>OpenServiceMesh (OSM) is the latest service mesh Implementation and simply too young to be production-ready.</td>
             <td>To enable the same feature set as Service Meshes with sidecars, a lot of maunal configuration is used.</td>
           </tr>
       </tbody>
@@ -141,11 +130,9 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
-        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">HTTP/1.1+</th>
-        <td>yes</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -163,11 +150,9 @@
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
-        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">gRPC</th>
-        <td>yes</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
@@ -191,7 +176,6 @@
         <td>yes</td>
         <td>yes (per Node)</td>
         <td>yes</td>
-        <td>yes</td>
         <td>yes (per Node)</td>
       </tr>
       <tr>
@@ -202,7 +186,6 @@
         <td><a href="https://www.consul.io/docs/k8s/installation/install#enable-the-consul-cni-plugin" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/networking/#transparent-proxying" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/issues/1610" target="_blank">no</a></td>
         <td>not necessary</td>
       </tr>
     </tbody>
@@ -214,24 +197,22 @@
     <tbody>
       <tr>
         <th scope="row">Platform</th>
-        <td>Kubernetes</td>
+        <td>Kubernetes, VMs</td>
         <td>Kubernetes</td>
         <td>ECS, Fargate, EKS, EC2</td>
         <td>Kubernetes, Nomad, VMs, ECS, Lambda</td>
         <td>Kubernetes</td>
         <td>Kubernetes, VMs, ECS</td>
         <td>Kubernetes</td>
-        <td>Kubernetes</td>
       </tr>
       <tr>
         <th scope="row">Cloud Integrations</th>
-        <td><a href="https://cloud.google.com/istio" target="_blank">Google Cloud</a>, <a href="https://www.alibabacloud.com/help/doc-detail/89805.htm" target="_blank">Alibaba Cloud</a>, <a href="https://cloud.ibm.com/docs/containers?topic=containers-istio" target="_blank">IBM Cloud</a></td>
+        <td><a href="https://cloud.google.com/istio" target="_blank">Google Cloud</a>, <a href="https://www.alibabacloud.com/help/doc-detail/89805.htm" target="_blank">Alibaba Cloud</a>, <a href="https://cloud.ibm.com/docs/containers?topic=containers-istio" target="_blank">IBM Cloud</a>, <a href="https://learn.microsoft.com/en-us/azure/aks/istio-about" target="_blank">Microsoft Azure</a>, <a href="https://support.huaweicloud.com/asm/index.html" target="_blank">Huawei Cloud</a>, <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift/what-is-openshift-service-mesh" target="_blank">Red Hat OpenShift</a>, <a href="https://daocloud.io/dce_5.0" target="_blank">DaoCloud</a>, <a href="https://tanzu.vmware.com/service-mesh" target="_blank">VMware Tanzu</a>, <a href="https://cloud.tencent.com/product/tcm" target="_blank">Tencent Cloud</a>, <a href="https://cloud.baidu.com/product/csm.html" target="_blank">Baidu AI Cloud</a>, <a href="https://docs.oracle.com/en/operating-systems/olcne/1.6/mesh/intro.html#intro" target="_blank">Oracle Cloud Native Environment</a></td>
         <td><a href="https://marketplace.digitalocean.com/apps/linkerd-beta" target="_blank">DigitalOcean</a></td>
         <td><a href="https://aws.amazon.com/app-mesh/" target="_blank">AWS</a></td>
         <td><a href="https://cloud.hashicorp.com/products/consul" target="_blank">HCP Consul on AWS and Azure</a></td>
         <td></td>
         <td></td>
-        <td><a href="https://docs.microsoft.com/en-us/azure/aks/servicemesh-osm-about" target="_blank">Microsoft Azure</a></td>
         <td></td>
       </tr>
       <tr>
@@ -242,7 +223,6 @@
         <td><a href="https://www.consul.io/docs/k8s/deployment-configurations/multi-cluster/vms-and-kubernetes" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
-        <td>no</td>
         <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/external-workloads/#external-workloads" target="_blank">yes</a></td>
       </tr>
       <tr>
@@ -253,7 +233,6 @@
         <td><a href="https://developer.hashicorp.com/consul/docs/connect/cluster-peering" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/issues/3456" target="_blank">planned</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/clustermesh/clustermesh/#gs-clustermesh" target="_blank">yes</a></td>
       </tr>
     </tbody>
@@ -271,7 +250,6 @@
         <td><a href="https://github.com/hashicorp/consul-smi-controller" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -282,7 +260,6 @@
         <td>no</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank"></a>yes</a></td>
         <td>no</td>
-        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -293,7 +270,6 @@
         <td>no</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#traffic-splitting" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -304,7 +280,6 @@
         <td>no</td>
         <td>no</td>
         <td>no</td>
-        <td><a href="https://github.com/openservicemesh/osm#smi-specification-support" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
     </tbody>
@@ -322,7 +297,6 @@
         <td>no</td>
         <td>no</td>
         <td>no</td>
-        <td><a href="https://docs.openservicemesh.io/docs/guides/observability/logs"/>yes</a>, using <a href="https://fluentbit.io/">Fluent Bit</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -333,7 +307,6 @@
         <td><a href="https://developer.hashicorp.com/consul/docs/connect/observability/access-logs" target="_blank">yes</a></td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-log/#traffic-log" target="_blank">yes</a></td>
-        <td>no</td>
         <td>yes, via <a href="https://docs.cilium.io/en/v1.12/policy/visibility/#proxy-visibility">Proxy injection</a></td>
       </tr>
       <tr>
@@ -344,7 +317,6 @@
         <td>yes, depending on the proxy used</td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics">yes</a></td>
-        <td>yes</td>
         <td>yes, L7 metrics via <a href="https://docs.cilium.io/en/latest/policy/visibility/#proxy-visibility">Proxy injection</a></td>
       </tr>
       <tr>
@@ -355,7 +327,6 @@
         <td><a href="https://www.consul.io/docs/k8s/connect/observability/metrics#deploying-prometheus-_for-demo-and-non-production-use-cases-only_">yes, for non-prod environments</a></td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics/#configure-prometheus">yes</a></td>
-        <td>yes</td>
         <td><a href="https://docs.cilium.io/en/latest/installation/grafana/#install-metrics">yes</a></td>
       </tr>
       <tr>
@@ -366,7 +337,6 @@
         <td>no</td>
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics/#grafana-dashboards">yes</a>, including a <a href="https://github.com/kumahq/kuma-grafana-datasource">datasource</a></td>
-        <td>yes</td>
         <td><a href="https://docs.cilium.io/en/latest/installation/grafana/#install-metrics">yes</a></td>
       </tr>
       <tr>
@@ -375,7 +345,6 @@
         <td><a href="https://linkerd.io/2/tasks/getting-per-route-metrics/" target="_blank">yes</a></td>
         <td></td>
         <td>depending on the proxy used</td>
-        <td>no</td>
         <td>no</td>
         <td>no</td>
         <td>yes, via <a href="https://docs.cilium.io/en/latest/policy/visibility/#proxy-visibility">Proxy injection</a></td>
@@ -388,7 +357,6 @@
         <td><a href="https://www.consul.io/docs/connect/observability/ui-visualization" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, with a service topology map in grafana</td>
-        <td>no</td>
         <td>yes, <a href="https://github.com/cilium/hubble" target="_blank">Hubble</a></td>
       </tr>
       <tr>
@@ -399,7 +367,6 @@
         <td><a href="https://www.datadoghq.com" target="_blank">Datadog</a>, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io/" target="_blank">zipkin</a>, <a href="https://kuma.io/docs/latest/policies/traffic-trace/#add-datadog-backend">datadog</a></td>
-        <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
         <td><a href="https://github.com/cilium/hubble-otel" target="_blank">OpenTelemetry via hubble-otel</a></td>
       </tr>
       <tr>
@@ -410,7 +377,6 @@
         <td><a href="https://www.consul.io/docs/connect/distributed-tracing" target="_blank">yes</a></td>
         <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-trace/" target="_blank">yes, Jaeger</a></td>
-        <td><a href="https://docs.openservicemesh.io/docs/tasks_usage/observability/tracing/#automatically-provision-jaeger">yes (install with flag), Jaeger</a></td>
         <td>no</td>
       </tr>
     </tbody>
@@ -429,7 +395,6 @@
         <td>yes</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-route/#load-balancer-types" target="_blank">yes (Round Robin, Least Request, Ring Hash, Random, Maglev)</a></td>
         <td>yes</td>
-        <td>yes</td>
       </tr>
       <tr>
         <th scope="row">Percentage-based Traffic Splits</th>
@@ -439,7 +404,6 @@
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-splitter" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-route" target="_blank">yes</a></td>
-        <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -450,7 +414,6 @@
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-route/#l7-traffic-split" target="_blank">yes</a></td>
-        <td>Header-based via <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
     </tbody>
@@ -468,7 +431,6 @@
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-defaults#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
         <td><a href="https://kuma.io/docs/latest/policies/circuit-breaker/" target="_blank">yes</a></td>
-        <td><a href="https://github.com/openservicemesh/osm/issues/980">yes</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -479,7 +441,6 @@
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router#requesttimeout" target="_blank">yes</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
         <td>yes, <a href="https://kuma.io/docs/latest/policies/retry/" target="_blank">retry</a> and <a href="https://kuma.io/docs/1.1.0/policies/timeout" target="_blank">timeout</a></td>
-        <td>no</td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -491,7 +452,6 @@
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/retry/#usage">only Method-based retry</a> other can be done with Proxy templating</td>
         <td>no</td>
-        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Fault Injection</th>
@@ -502,7 +462,6 @@
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/fault-injection/" target="_blank">yes</a></td>
         <td>no</td>
-        <td>no</td>
       </tr>
       <tr>
         <th scope="row">Delay Injection</th>
@@ -512,7 +471,6 @@
         <td>no*</td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/fault-injection/" target="_blank">yes</a></td>
-        <td>no</td>
         <td>no</td>
       </tr>
     </tbody>
@@ -530,7 +488,6 @@
         <td><a href="https://www.consul.io/docs/connect/connect-internals#mutual-transport-layer-security-mtls" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
-        <td><a href="https://docs.openservicemesh.io/docs/tasks_usage/certificates/" target="_blank"></a>yes</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/tls-visibility/#gs-tls-inspection" target="_blank">yes</a>, with manually created certs</td>
       </tr>
       <tr>
@@ -541,7 +498,6 @@
         <td>yes</td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
-        <td>yes, via <a href="https://linkerd.io/2.11/features/server-policy/" target="_blank">https://linkerd.io/2.11/features/server-policy/</a></td>
         <td>yes</td>
       </tr>
       <tr>
@@ -552,7 +508,6 @@
         <td><a href="https://developer.hashicorp.com/consul/docs/k8s/connect/onboarding-tproxy-mode">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#permissive-mtls">yes</a></td>
-        <td>yes</td>
         <td></td>
       </tr>
       <tr>
@@ -563,7 +518,6 @@
         <td>yes</td>
         <td>no</td>
         <td>no</td>
-        <td>yes</td>
         <td>no</td>
       </tr>
       <tr>
@@ -574,7 +528,6 @@
         <td>yes, <a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
-        <td><a href="https://docs.openservicemesh.io/docs/tasks_usage/certificates/#using-hashicorp-vault" target="_blank">HashiCorp Vault</a>, <a href="https://cert-manager.io/docs/installation/kubernetes/" target="_blank">cert-manager</a> and <a href="https://azure.microsoft.com/en-us/services/key-vault/" target="_blank">Azure Key Vault</a></td>
         <td>yes</td>
       </tr>
       <tr>
@@ -585,7 +538,6 @@
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
-        <td><a href="https://docs.openservicemesh.io/docs/install/manual_demo/#traffic-policy-modes" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/stable/policy/">yes</a></td>
       </tr>
     </tbody>
