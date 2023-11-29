@@ -16,7 +16,7 @@
     <tbody>
       <tr>
         <th scope="row">Current version</th>
-        <td>1.18</td>
+        <td>1.20</td>
         <td>2.13</td>
         <td></td>
         <td>1.16</td>
@@ -29,7 +29,7 @@
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
         <td>Closed Source</td>
-        <td>Mozilla License</td>
+        <td>Business Source License</td>
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
         <td>Apache License 2.0</td>
@@ -46,7 +46,7 @@
       </tr>
       <tr>
         <th scope="row">Service Proxy</th>
-        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, <a href="https://istio.io/latest/blog/2021/proxyless-grpc/proxyless" target="_blank">proxyless for gRPC (experimental)</a></td>
+        <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, <a href="https://istio.io/latest/blog/2022/introducing-ambient-mesh/" target="_blank">Ambient Mesh (alpha)</a></td>
         <td><a href="https://github.com/linkerd/linkerd2-proxy" target="_blank">Linkerd2-proxy</a></td>
         <td><a href="https://www.envoyproxy.io" target="_blank">Envoy</a></td>
         <td>defaults to <a href="https://www.envoyproxy.io" target="_blank">Envoy</a>, exchangeable</td>
@@ -56,12 +56,12 @@
       </tr>
       <tr>
         <th scope="row">Ingress Controller</th>
-        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy / Own Concept</a>, support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a></td>
-        <td>any</td>
+        <td><a href="https://istio.io/docs/tasks/traffic-management/ingress/" target="_blank">Envoy</a>, support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a></td>
+        <td>not provided</td>
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html" target="_blank">AWS Virtual Gateway</a>, exposable with AWS Elastic Load Balancer/<a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/" target="_blank">AWS Load Balancer Controller</a></td>
         <td><a href="https://www.consul.io/docs/connect/gateways#ingress-gateways" target="_blank">Envoy</a>. Support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a> with Consul API Gateway</td>
-        <td>any</td>
-        <td>any</td>
+        <td>not provided</td>
+        <td>not provided</td>
         <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/ingress/" target="_blank">Cilium Ingress for TLS & path-based routing features</a>, compatible with any other</td>
       </tr>
       <tr>
@@ -72,7 +72,7 @@
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
           <td>see <a href="https://github.com/traefik/mesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
           <td>see <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
-          <td>see <a href="https://docs.cilium.io/en/latest/community/governance/" target="_blank">Governance</a></td>
+          <td>see <a href="https://docs.cilium.io/en/latest/community/governance/" target="_blank">Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
         </tr>
       <tr>
           <th scope="row">Tutorial</th>
@@ -102,7 +102,7 @@
             <td>Consul service mesh can be used in any Consul environment and therefore does not require a scheduler. The proxy can be changed and extended.</td>
             <td>Traefik Mesh focuses on a selection of features to achieve good usability and performance.</td>
             <td>Kuma supports both Kubernetes and VMs - including hybrid multi-zone deployments - and scales to many autonomous zones with different network constraints, it also allows you to customize the Envoy Proxy.</td>
-            <td>Cilium takes a different approach on service mesh by making use of eBPF and therefore it doesn't need sidecars at all, which saves complexity and cost.</td>
+            <td>Cilium takes a different approach on service mesh by making use of eBPF and therefore it doesn't need sidecars at all for some very simple use cases.</td>
           </tr>
           <tr>
             <th scope="row">Drawbacks</th>
@@ -112,7 +112,7 @@
             <td>Consul uses its own internal storage, and does not on rely Kubernetes for persistent storage.</td>
             <td>Traefik Mesh currently does not support transparent TLS encryption.</td>
             <td>Kuma is possibly the most flexible service mesh. Teams should thoroughly consider whether their project can handle the complexity involved.</td>
-            <td>To enable the same feature set as Service Meshes with sidecars, a lot of maunal configuration is used.</td>
+            <td>Any L7 use cases require the use of an Envoy proxy, which is shared between all workloads on the node and not a recommended security configuration.</td>
           </tr>
       </tbody>
     <thead style="background-color: white; color: #ff4d67">
@@ -234,53 +234,6 @@
         <td>no</td>
         <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/clustermesh/clustermesh/#gs-clustermesh" target="_blank">yes</a></td>
-      </tr>
-    </tbody>
-    <thead style="background-color: white; color: #ff4d67">
-      <tr>
-        <th scope="col">Service Mesh Interface Compatibility</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Traffic Access Control</th>
-        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes (unofficial/3rd party support)</a></td>
-        <td>no</td>
-        <td>no</td>
-        <td><a href="https://github.com/hashicorp/consul-smi-controller" target="_blank">yes</a></td>
-        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank">yes</a></td>
-        <td>no</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <th scope="row">Traffic Specs</th>
-        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes (unofficial/3rd party support)</a></td>
-        <td>no</td>
-        <td>no</td>
-        <td>no</td>
-        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#access-control" target="_blank"></a>yes</a></td>
-        <td>no</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <th scope="row">Traffic Split</th>
-        <td><a href="https://github.com/servicemeshinterface/smi-adapter-istio" target="_blank">yes (unofficial/3rd party support)</a></td>
-        <td><a href="https://linkerd.io/2/features/traffic-split/" target="_blank">yes</a></td>
-        <td>no</td>
-        <td>no</td>
-        <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#traffic-splitting" target="_blank">yes</a></td>
-        <td>no</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <th scope="row">Traffic Metrics</th>
-        <td><a href="https://github.com/servicemeshinterface/smi-metrics/tree/master/pkg/istio" target="_blank">yes (unofficial/3rd party support)</a></td>
-        <td><a href="https://github.com/servicemeshinterface/smi-metrics/tree/master/pkg/linkerd" target="_blank">yes (unofficial/3rd party support)</a></td>
-        <td>no</td>
-        <td>no</td>
-        <td>no</td>
-        <td>no</td>
-        <td>no</td>
       </tr>
     </tbody>
     <thead style="background-color: white; color: #ff4d67">
