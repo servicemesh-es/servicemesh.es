@@ -21,7 +21,7 @@
         <td></td>
         <td>1.16</td>
         <td>1.4</td>
-        <td>2.0</td>
+        <td>2.6</td>
         <td>1.12</td>
       </tr>
       <tr>
@@ -61,7 +61,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html" target="_blank">AWS Virtual Gateway</a>, exposable with AWS Elastic Load Balancer/<a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/" target="_blank">AWS Load Balancer Controller</a></td>
         <td><a href="https://www.consul.io/docs/connect/gateways#ingress-gateways" target="_blank">Envoy</a>. Support for <a href="https://gateway-api.sigs.k8s.io/" target="_blank">Kubernetes Gateway API</a> with Consul API Gateway</td>
         <td>not provided</td>
-        <td>not provided</td>
+        <td>Support for <a href="https://kuma.io/docs/2.6.x/using-mesh/managing-ingress-traffic/gateway-api/#kubernetes-gateway-api" target="_blank">Kubernetes Gateway API</a>, <a href="https://kuma.io/docs/2.6.x/using-mesh/managing-ingress-traffic/builtin-routes/" target="_blank">Kuma builtin routes</a>, or Ingress API through <a href="https://kuma.io/docs/2.6.x/using-mesh/managing-ingress-traffic/delegated/" target="_blank">delegated Gateways</a></td>
         <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/ingress/" target="_blank">Cilium Ingress for TLS & path-based routing features</a>, compatible with any other</td>
       </tr>
       <tr>
@@ -71,7 +71,7 @@
           <td>AWS</td>
           <td>see <a href="https://github.com/hashicorp/consul/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing to Consul</a></td>
           <td>see <a href="https://github.com/traefik/mesh/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a></td>
-          <td>see <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
+          <td>see <a href="https://github.com/kumahq/kuma/blob/master/CONTRIBUTING.md" target="_blank">Contributing notice</a>, <a href="https://github.com/kumahq/kuma/blob/master/GOVERNANCE.md" target="_blank">Governance</a>, and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
           <td>see <a href="https://docs.cilium.io/en/latest/community/governance/" target="_blank">Governance</a> and <a href="https://github.com/cncf/foundation/blob/master/charter.md" target="_blank" >CNCF Charter</a></td>
         </tr>
       <tr>
@@ -81,7 +81,7 @@
           <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/appmesh-getting-started.html" target="_blank">AWS App Mesh Getting Started</a></td>
           <td><a href="https://learn.hashicorp.com/collections/consul/gs-consul-service-mesh" target="_blank">HashiCorp Learn platform</a></td>
           <td><a href="https://doc.traefik.io/traefik-mesh/examples/" target="_blank">Traefik Mesh Example</a></td>
-          <td><a href="https://kuma.io/docs/latest/installation/kubernetes/" target="_blank">Install Kuma on Kubernetes</a></td>
+          <td><a href="https://kuma.io/docs/2.6.x/production/cp-deployment/multi-zone/" target="_blank">Install Kuma on Kubernetes</a></td>
           <td><a href="https://docs.cilium.io/en/latest/gettingstarted/k8s-install-default/" target="_blank">Cilium Quick Installation</a></td>
         </tr>
         <tr>
@@ -185,7 +185,7 @@
         <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ProxyConfiguration.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/k8s/installation/install#enable-the-consul-cni-plugin" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/documentation/networking/#transparent-proxying" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/production/dp-config/cni/" target="_blank">yes</a></td>
         <td>not necessary</td>
       </tr>
     </tbody>
@@ -212,7 +212,7 @@
         <td><a href="https://aws.amazon.com/app-mesh/" target="_blank">AWS</a></td>
         <td><a href="https://cloud.hashicorp.com/products/consul" target="_blank">HCP Consul on AWS and Azure</a></td>
         <td></td>
-        <td></td>
+        <td><a href="https://konghq.com/products/kong-konnect/features/mesh-manager">Kong Konnect</a></td>
         <td></td>
       </tr>
       <tr>
@@ -222,7 +222,7 @@
         <td>yes, within AWS</td>
         <td><a href="https://www.consul.io/docs/k8s/deployment-configurations/multi-cluster/vms-and-kubernetes" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/production/dp-config/dpp-on-universal/" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/v1.12/gettingstarted/external-workloads/#external-workloads" target="_blank">yes</a></td>
       </tr>
       <tr>
@@ -232,7 +232,7 @@
         <td>yes, through <a href="https://aws.amazon.com/de/blogs/containers/cross-amazon-eks-cluster-app-mesh-using-aws-cloud-map/" target="_blank">AWS Cloud Map</a></td>
         <td><a href="https://developer.hashicorp.com/consul/docs/connect/cluster-peering" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/deployments/multi-zone" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/production/deployment/multi-zone/" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/clustermesh/clustermesh/#gs-clustermesh" target="_blank">yes</a></td>
       </tr>
     </tbody>
@@ -259,7 +259,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy-logs.html">yes</a></a></td>
         <td><a href="https://developer.hashicorp.com/consul/docs/connect/observability/access-logs" target="_blank">yes</a></td>
         <td>yes</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-log/#traffic-log" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshaccesslog/#meshaccesslog" target="_blank">yes</a></td>
         <td>yes, via <a href="https://docs.cilium.io/en/v1.12/policy/visibility/#proxy-visibility">Proxy injection</a></td>
       </tr>
       <tr>
@@ -269,7 +269,7 @@
         <td>yes</td>
         <td>yes, depending on the proxy used</td>
         <td>yes</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshmetric/#meshmetric">yes</a></td>
         <td>yes, L7 metrics via <a href="https://docs.cilium.io/en/latest/policy/visibility/#proxy-visibility">Proxy injection</a></td>
       </tr>
       <tr>
@@ -279,7 +279,7 @@
         <td>no</td>
         <td><a href="https://www.consul.io/docs/k8s/connect/observability/metrics#deploying-prometheus-_for-demo-and-non-production-use-cases-only_">yes, for non-prod environments</a></td>
         <td>yes</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics/#configure-prometheus">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/explore/observability/#configuring-prometheus">yes</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/grafana/#install-metrics">yes</a></td>
       </tr>
       <tr>
@@ -289,7 +289,7 @@
         <td>no</td>
         <td>no</td>
         <td>yes</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-metrics/#grafana-dashboards">yes</a>, including a <a href="https://github.com/kumahq/kuma-grafana-datasource">datasource</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/explore/observability/#configuring-grafana">yes</a>, including a <a href="https://github.com/kumahq/kuma-grafana-datasource">datasource</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/grafana/#install-metrics">yes</a></td>
       </tr>
       <tr>
@@ -309,7 +309,7 @@
         <td>yes, <a href="http://aws.amazon.com/cloudwatch/" target="_blank">AWS Cloud Watch</a></td>
         <td><a href="https://www.consul.io/docs/connect/observability/ui-visualization" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/documentation/gui" target="_blank">yes</a>, with a service topology map in grafana</td>
+        <td><a href="https://kuma.io/docs/2.6.x/production/gui/#getting-started" target="_blank">yes</a>, with a service topology map in grafana</td>
         <td>yes, <a href="https://github.com/cilium/hubble" target="_blank">Hubble</a></td>
       </tr>
       <tr>
@@ -319,7 +319,7 @@
         <td><a href="http://aws.amazon.com/xray/" target="_blank">AWS X-Ray</a>, <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tracing.html#jaeger" target="_blank">Jaeger and DataDog</a></td>
         <td><a href="https://www.datadoghq.com" target="_blank">Datadog</a>, <a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io" target="_blank">Zipkin</a>, <a href="https://opentracing.io" target="_blank">OpenTracing</a>, <a href="https://www.honeycomb.io" target="_blank">Honeycomb</a></td>
         <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a></td>
-        <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io/" target="_blank">zipkin</a>, <a href="https://kuma.io/docs/latest/policies/traffic-trace/#add-datadog-backend">datadog</a></td>
+        <td><a href="https://www.jaegertracing.io" target="_blank">Jaeger</a>, <a href="https://zipkin.io/" target="_blank">Zipkin</a>, <a href="https://kuma.io/docs/2.6.x/explore/observability/#configuring-datadog">Datadog</a>, and <a href="https://kuma.io/docs/2.6.x/policies/meshtrace/#opentelemetry">OpenTelemetry</a></a></td>
         <td><a href="https://github.com/cilium/hubble-otel" target="_blank">OpenTelemetry via hubble-otel</a></td>
       </tr>
       <tr>
@@ -329,7 +329,7 @@
         <td><a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-services-appmesh.html" target="_blank">yes, AWS X-Ray</a></td>
         <td><a href="https://www.consul.io/docs/connect/distributed-tracing" target="_blank">yes</a></td>
         <td><a href="https://github.com/traefik/mesh/pull/79" target="_blank">yes, Jaeger</a></td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-trace/" target="_blank">yes, Jaeger</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/explore/observability/#demo-setup" target="_blank">yes, Jaeger</a></td>
         <td>no</td>
       </tr>
     </tbody>
@@ -346,7 +346,7 @@
         <td>yes</td>
         <td><a href="https://learn.hashicorp.com/tutorials/consul/load-balancing-envoy" target="_blank">yes (Round Robin, Random, Weighted, Least Request, Ring Hash, Maglev)</a></td>
         <td>yes</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-route/#load-balancer-types" target="_blank">yes (Round Robin, Least Request, Ring Hash, Random, Maglev)</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshloadbalancingstrategy/" target="_blank">yes (Round Robin, Least Request, Ring Hash, Random, Maglev)</a></td>
         <td>yes</td>
       </tr>
       <tr>
@@ -356,7 +356,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-splitter" target="_blank">yes</a></td>
         <td>yes, through <a href="https://github.com/servicemeshinterface/smi-spec/blob/master/apis/traffic-split/v1alpha3/traffic-split.md" target="_blank">SMI</a></td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-route" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshhttproute/#traffic-split" target="_blank">yes</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -366,7 +366,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a> </td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-route/#l7-traffic-split" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshhttproute/" target="_blank">yes</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
     </tbody>
@@ -383,7 +383,7 @@
         <td><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/aws-app-mesh-introduces-circuit-breaker-capabilities/" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-defaults#limits" target="_blank">yes</a></td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#circuit-breaker" target="_blank">yes</a></td>
-        <td><a href="https://kuma.io/docs/latest/policies/circuit-breaker/" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshcircuitbreaker/" target="_blank">yes</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -393,7 +393,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html"target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router#requesttimeout" target="_blank">yes</td>
         <td><a href="https://doc.traefik.io/traefik-mesh/configuration/#retry" target="_blank">yes</a></td>
-        <td>yes, <a href="https://kuma.io/docs/latest/policies/retry/" target="_blank">retry</a> and <a href="https://kuma.io/docs/1.1.0/policies/timeout" target="_blank">timeout</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshretry/" target="_blank">Retry</a> and <a href="https://kuma.io/docs/2.6.x/policies/meshtimeout/" target="_blank">Timeout</a></td>
         <td>via <a href="https://docs.cilium.io/en/v1.12/gettingstarted/servicemesh/envoy-traffic-management/" target="_blank">manual configuration of Envoy proxy</a></td>
       </tr>
       <tr>
@@ -403,7 +403,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/config-entries/service-router#requesttimeout" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/retry/#usage">only Method-based retry</a> other can be done with Proxy templating</td>
+        <td>yes, <a href="https://kuma.io/docs/2.6.x/policies/meshretry/">Retry</a>, and <a href="https://kuma.io/docs/2.6.x/policies/meshtimeout/">Timeout</a> (with targerRef: MeshHTTPRoute)</td>
         <td>no</td>
       </tr>
       <tr>
@@ -413,7 +413,7 @@
         <td></td>
         <td>no*</td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/fault-injection/" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshfaultinjection/" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
       <tr>
@@ -423,7 +423,7 @@
         <td></td>
         <td>no*</td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/fault-injection/" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshfaultinjection/" target="_blank">yes</a></td>
         <td>no</td>
       </tr>
     </tbody>
@@ -440,7 +440,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td><a href="https://www.consul.io/docs/connect/connect-internals#mutual-transport-layer-security-mtls" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/mutual-tls/" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/latest/installation/tls-visibility/#gs-tls-inspection" target="_blank">yes</a>, with manually created certs</td>
       </tr>
       <tr>
@@ -450,7 +450,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a>, via client policies</td>
         <td>yes</td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/mutual-tls/" target="_blank">yes</a></td>
         <td>yes</td>
       </tr>
       <tr>
@@ -460,7 +460,7 @@
         <td></td>
         <td><a href="https://developer.hashicorp.com/consul/docs/k8s/connect/onboarding-tproxy-mode">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#permissive-mtls">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/mutual-tls/#permissive-mtls">yes</a></td>
         <td></td>
       </tr>
       <tr>
@@ -470,7 +470,7 @@
         <td>no</td>
         <td>yes</td>
         <td>no</td>
-        <td>no</td>
+        <td>yes, optional</td>
         <td>no</td>
       </tr>
       <tr>
@@ -480,7 +480,7 @@
         <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html" target="_blank">yes</a></td>
         <td>yes, <a href="https://www.consul.io/docs/connect/ca/vault" target="_blank">HashiCorp Vault</a>, <a href="https://www.consul.io/docs/connect/ca/aws" target="_blank">ACM Private CA</a>, <a href="https://www.consul.io/docs/connect/ca/consul#specifying-a-custom-private-key-and-root-certificate" target="_blank">custom CA</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/mutual-tls/#usage-of-provided-ca" target="_blank">yes</a></td>
         <td>yes</td>
       </tr>
       <tr>
@@ -490,7 +490,7 @@
         <td><a href="https://github.com/aws/aws-app-mesh-roadmap/issues/80" target="_blank">no</a>, but <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/security_iam_service-with-iam.html" target="_blank">support for IAM for user-authorization</a></td>
         <td><a href="https://www.consul.io/docs/connect/intentions" target="_blank">yes</a></td>
         <td>no</td>
-        <td><a href="https://kuma.io/docs/latest/policies/traffic-permissions/" target="_blank">yes</a></td>
+        <td><a href="https://kuma.io/docs/2.6.x/policies/meshtrafficpermission/" target="_blank">yes</a></td>
         <td><a href="https://docs.cilium.io/en/stable/policy/">yes</a></td>
       </tr>
     </tbody>
